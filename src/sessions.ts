@@ -5,8 +5,10 @@ export type SessionGuide = {
   remember: string
   mnemonic: string
   formula?: string
+  goals: string[]
   parts: { name: string; detail: string }[]
   vocab: { term: string; line: string }[]
+  ontoCase: { piece: string; fact: string }[]
   builds: string
   fromPrev: string
   toNext: string
@@ -33,6 +35,10 @@ export const SESSIONS: SessionGuide[] = [
     question: "Where is the problem?",
     remember: "Name the level before you diagnose. Wrong level = wrong fix.",
     mnemonic: "I-G-O: Individual, Group, Organization. Always climb the floors.",
+    goals: [
+      "Understand what organizational behavior is and how it relates to organizational effectiveness.",
+      "Always name the floor — individual, group/team, or organization — before you pick a fix.",
+    ],
     parts: [
       { name: "Individual", detail: "Personality, values, perception, motivation, job crafting, self-efficacy." },
       { name: "Group / team", detail: "Cliques, long-time nurses versus newer nurses versus patient care assistants, blame norms, not functioning as a team." },
@@ -42,6 +48,11 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Organizational behavior", line: "How individuals and groups act inside organizations." },
       { term: "Three levels", line: "Individual / group / organizational — pick the floor of the fix." },
       { term: "Effectiveness", line: "OB exists so any function you join can work better." },
+    ],
+    ontoCase: [
+      { piece: "Individual", fact: "Exhausted registered nurses; newer nurses called pests; Barbara is a new manager with low self-efficacy in the role." },
+      { piece: "Group / team", fact: "No teamwork. Long-time nurses versus newer nurses versus patient care assistants. Blame and favoritism are the norms." },
+      { piece: "Organization", fact: "Hiring freeze, no overtime, mystery reviews, physicians as order-takers, this unit known as the hospital’s worst." },
     ],
     builds: "This is the map of the course. Every later framework lives on one of these three floors.",
     fromPrev: "Start here. There is no earlier session.",
@@ -59,6 +70,10 @@ export const SESSIONS: SessionGuide[] = [
     remember: "Four evidence types: scientific, organizational, experiential, stakeholder. Theory needs a why plus when it fails.",
     mnemonic: "Science, org data, experience, stakeholders. Theory = how/why + when it fails. Hypothesis predicts. Correlation is not causation.",
     formula: "Good theory: variables + causal mechanism + boundary / anomaly",
+    goals: [
+      "Know what good theory is (causal mechanism plus when it fails) and how a hypothesis differs.",
+      "Use four types of evidence — scientific, organizational, experiential, stakeholder — and pair numbers with meaning.",
+    ],
     parts: [
       { name: "Scientific", detail: "Published research on turnover, equity, Job Characteristics Model, influence." },
       { name: "Organizational", detail: "Satisfaction, turnover, patient scores, staffing, 29 one-to-one requests." },
@@ -70,6 +85,12 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Hypothesis", line: "A theory-derived prediction you can test." },
       { term: "Four types of evidence", line: "Scientific, organizational, experiential, stakeholder." },
       { term: "Quant vs qual", line: "Numbers vs meaning (coding words and observations)." },
+    ],
+    ontoCase: [
+      { piece: "Scientific", fact: "Published research on turnover, equity, job design, and influence — she should import this, not invent it." },
+      { piece: "Organizational", fact: "Lowest satisfaction, highest turnover, falling patient scores, 29 one-on-one requests, two registered nurses gone in month one." },
+      { piece: "Experiential", fact: "Her years as a registered nurse and Betty Nolan’s example. She does not yet have manager-domain reps, so gut is thin." },
+      { piece: "Stakeholder / qualitative", fact: "Anonymous off-site cards: teamwork, conflict, doctors, money-over-patients, favoritism, staffing, mystery reviews." },
     ],
     builds: "Session 1 said what to study. Session 2 says how to know. Justify every later diagnosis with evidence.",
     fromPrev: "Session 1 named the floors. Now you need proof before you pick a floor to act on.",
@@ -87,6 +108,10 @@ export const SESSIONS: SessionGuide[] = [
     remember: "Behavior is a function of the person and the environment. Fit is the overlap. The Big Five traits beat type labels. Common values beat demonizing.",
     mnemonic: "Openness, conscientiousness, extraversion, agreeableness, neuroticism. Terminal = ends, instrumental = means. Barnum = if it fits anyone, it explains no one.",
     formula: "B = f(P, E). Fit = match of person characteristics to job/org characteristics.",
+    goals: [
+      "Use Lewin’s equation: behavior is a function of the person and the environment, not either alone.",
+      "Tell terminal values (ends) from instrumental values (means), and prefer the Big Five over type labels.",
+    ],
     parts: [
       { name: "Person", detail: "Values, Big Five, affect, self-monitoring, proactivity, self-esteem, self-efficacy, locus of control." },
       { name: "Environment", detail: "Job, organization, culture, staffing, physicians, reviews." },
@@ -97,6 +122,12 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Terminal vs instrumental values", line: "Desired ends vs preferred means." },
       { term: "Big Five personality traits", line: "Openness, conscientiousness, extraversion, agreeableness, neuroticism (need for stability)." },
       { term: "Myers-Briggs Type Indicator vs traits", line: "Types are preference bundles; Barnum is the risk." },
+    ],
+    ontoCase: [
+      { piece: "Person (P)", fact: "Barbara: well-liked registered nurse, new master’s, not yet a practiced large-unit manager. Seniors may be lower in agreeableness." },
+      { piece: "Environment (E)", fact: "Freeze, blame culture, mystery reviews, nurses borrowed from other units, physicians as order-givers." },
+      { piece: "Fit / match", fact: "The same people might function on Betty Nolan’s unit. Hazing is currently paid off by status and control of scarce help — change E, not a personality workshop." },
+      { piece: "Values", fact: "Shared terminal value: patient care. Clash is instrumental: how long-time nurses socialize newer nurses. Unite on the end; do not demonize." },
     ],
     builds: "Puts people into Session 1's individual level. Later sessions change E (job, rewards, power) more than P.",
     fromPrev: "Session 2 gave you evidence. Session 3 tells you not to read that evidence as 'bad people.'",
@@ -113,6 +144,10 @@ export const SESSIONS: SessionGuide[] = [
     remember: "Perceive → attribute → decide → evaluate. Intuition needs expertise in a predictable world. Otherwise satisfice and debias.",
     mnemonic: "Perceive → attribute → decide → evaluate. Intuition = time pressure + a predictable environment + domain expertise.",
     formula: "3 futures × 3 objectives × 3 options. Satisfice when you cannot maximize.",
+    goals: [
+      "Name the decision type (programmed vs nonprogrammed; strategic / tactical / operational) and pick a model: intuitive, rational, or bounded.",
+      "Walk perceive → attribute → decide → evaluate, name the trap, and pick a debiasing tool.",
+    ],
     parts: [
       { name: "Perceive", detail: "Self-enhancement, stereotypes, self-fulfilling prophecy." },
       { name: "Attribute", detail: "Self-serving bias, fundamental attribution error, availability, regression to the mean, anchoring, framing." },
@@ -124,6 +159,13 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Satisfice", line: "Good enough under cognitive limits and imperfect information." },
       { term: "fundamental attribution error vs self-serving", line: "Others = character; me = situation when I fail." },
       { term: "Escalation", line: "Throwing more effort at a failing course because you already invested." },
+    ],
+    ontoCase: [
+      { piece: "Decision type", fact: "Turning the unit around is nonprogrammed and tactical under crisis. Staffing a shift is operational. The freeze is a strategic constraint." },
+      { piece: "Intuition gate", fact: "Time pressure: yes. Predictable environment: no. Domain expertise as a manager: no. Do not 'trust her nurse gut' for this." },
+      { piece: "Perceive / stereotype", fact: "Long-time nurses call Megan a pest. That generalization then withholds teaching." },
+      { piece: "Self-fulfilling prophecy + fundamental attribution error", fact: "Withhold teaching → she looks unskilled → 'confirmed.' Situation (no orientation, short staff) is downplayed." },
+      { piece: "Escalation risk", fact: "Twenty-nine one-on-ones already started. Doubling down because she invested a month is escalation. Premortem it; satisfice with 3×3×3." },
     ],
     builds: "Explains why people misread the person-environment picture — and why Barbara's first-month choices can lock in.",
     fromPrev: "Session 3 said B = f(P,E). Session 4 says we distort P and E on the way in.",
@@ -141,6 +183,10 @@ export const SESSIONS: SessionGuide[] = [
     remember: "Needs → specific goals → hope vs reward → expectancy × instrumentality × valence → equity. Motivation is not performance.",
     mnemonic: "Needs, specific goals, Kerr (hope ≠ reward), Can I / Will it pay / Do I care, then fair vs whom.",
     formula: "Motivation = E × I × V (any zero kills it)",
+    goals: [
+      "Keep motivation distinct from performance. Walk needs → goals → rewards → expectancy → equity.",
+      "Diagnose hygiene vs motivators, Kerr’s hope-versus-reward table, and which term in expectancy × instrumentality × valence is zero.",
+    ],
     parts: [
       { name: "Needs", detail: "Maslow; Existence-Relatedness-Growth plus frustration-regression; Herzberg hygiene vs motivators." },
       { name: "Goals", detail: "Specific, hard goals plus feedback. Make the Director's vague demand specific, measurable, attainable, relevant, and time-bound." },
@@ -152,6 +198,13 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Frustration-regression", line: "Existence-Relatedness-Growth: blocked growth or relatedness → fight over existence resources (hours, assignments, favorites)." },
       { term: "Alignment / Kerr", line: "We hope for A, we reward B." },
       { term: "Equity", line: "Outcomes/inputs vs a referent. Exit is a response, not a mystery." },
+    ],
+    ontoCase: [
+      { piece: "Motivation ≠ performance", fact: "Nurses covering extra patients may be highly motivated to protect patients and still post declining scores." },
+      { piece: "Hygiene / existence", fact: "Staffing, freeze, hostility, opaque policy. Herzberg: dissatisfaction stays until these move. Motivators (recognition) will bounce off." },
+      { piece: "Kerr alignment", fact: "Hospital hopes for teamwork and quality; freeze + no overtime + mystery reviews reward survive-your-shift." },
+      { piece: "Expectancy × instrumentality × valence", fact: "Cannot perform with this census and borrowed-unit coverage (E). Reviews are a mystery (I). Extra uncompensated shifts may be unwanted (V)." },
+      { piece: "Equity", fact: "Same pay, worse schedules than favorites. Turnover is restoring the ratio by exiting." },
     ],
     builds: "Takes Session 4's 'they chose X' and asks what the system made rational. This is the extrinsic engine.",
     fromPrev: "Session 4 was how they see and choose. Session 5 is why the incentive system makes those choices sensible.",
@@ -169,6 +222,10 @@ export const SESSIONS: SessionGuide[] = [
     remember: "Variety, identity, significance, autonomy, feedback. Motivating Potential Score = ((V+I+S)/3) × A × F. Autonomy or feedback near zero kills the score.",
     mnemonic: "Variety, identity, significance, autonomy, feedback. Meaning trio gets averaged; A and F multiply — zeros are fatal.",
     formula: "Motivating Potential Score = ((Variety + Identity + Significance) / 3) × Autonomy × Feedback",
+    goals: [
+      "Tell extrinsic from intrinsic motivation, and scientific management from the Job Characteristics Model.",
+      "Score variety, identity, significance, autonomy, and feedback. Know why autonomy and feedback are the fatal multipliers.",
+    ],
     parts: [
       { name: "Scientific management", detail: "Efficiency, people as factors of production, manager plans the method." },
       { name: "Five characteristics", detail: "Variety, identity, significance, autonomy, feedback." },
@@ -180,6 +237,12 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Scientific management", line: "People as interchangeable production factors." },
       { term: "Five job characteristics", line: "Variety, identity, significance, autonomy, feedback." },
       { term: "Motivating Potential Score", line: "If autonomy or feedback is near 0, significance cannot save the score." },
+    ],
+    ontoCase: [
+      { piece: "Scientific management", fact: "The freeze plus nurses borrowed from other units treats people as interchangeable coverage — efficiency over identity." },
+      { piece: "Significance", fact: "Already high: surgical patients. That is why 'nursing is meaningful' is not an exam answer by itself." },
+      { piece: "Identity / variety", fact: "Care chopped across shifts and unfamiliar substitutes. Chaos crowds skilled nursing, so variety of craft work falls." },
+      { piece: "Autonomy and feedback (multipliers)", fact: "Cannot control staffing or assignments. Feedback is rare or punishing. Either multiplier near zero collapses the score. Raise these first." },
     ],
     builds: "Session 5 tried to move people with goals and rewards. Session 6 asks whether the job itself is a reward.",
     fromPrev: "Session 5 is the pay/goal machine. Session 6 is the job machine — cheaper under a freeze.",
@@ -196,6 +259,10 @@ export const SESSIONS: SessionGuide[] = [
     question: "Can they reshape meaning?",
     remember: "Do not wait to find a calling. Craft perceptions, tasks, and relationships. Passion often follows mastery.",
     mnemonic: "PTR: Perceptions, Tasks, Relationships. Passion is often a byproduct of mastery, not a treasure hunt.",
+    goals: [
+      "Reject the scavenger-hunt story of calling. Passion often follows mastery, not the reverse.",
+      "Name the three crafts: perceptions (how you narrate), tasks (boundaries), relationships (who and how).",
+    ],
     parts: [
       { name: "Heresies", detail: "Luck-only; one true calling; work will be bliss; the world will notice; all meaning lives at work." },
       { name: "Passion story", detail: "Follow passion → find calling → happiness. Treats passion as existing a priori." },
@@ -206,6 +273,12 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Calling", line: "Deeply fulfilling work believed to make the world better." },
       { term: "Five heresies", line: "Luck, one true calling, bliss, fame, all meaning equals work." },
       { term: "Job crafting", line: "Change how you narrate, what you do, and whom you do it with." },
+    ],
+    ontoCase: [
+      { piece: "Heresy to reject", fact: "'I chose the wrong calling' because nursing met misery here. The job and culture blocked meaning; they did not pick the wrong life." },
+      { piece: "Perceptions", fact: "Narrate the unit as protecting post-op patients through a crisis, not as the hospital’s problem child." },
+      { piece: "Tasks", fact: "Own a bounded extra — precepting checklist, pain protocol — not infinite extra shifts." },
+      { piece: "Relationships", fact: "Mentoring pairs instead of hazing cliques. One respected senior who precepts is relationship crafting with cover from Barbara." },
     ],
     builds: "Worker-side version of Session 6. If Barbara cannot redesign every job, people can still recraft pieces of it.",
     fromPrev: "Session 6 redesigned the job from above. Session 7 redesigns it from inside the role.",
@@ -223,6 +296,10 @@ export const SESSIONS: SessionGuide[] = [
     remember: "Five power bases plus dependence (scarcity, importance, substitutability). Freeze removes carrots. Cialdini without money. Watch new power and the agentic shift.",
     mnemonic: "Coercive, reward, legitimate, expert, referent. Dependence = scarce, important, (non)substitutable. Let's Recycle Some Cans And Save Unity.",
     formula: "Power: Coercive, Reward, Legitimate, Expert, Referent. Influence: Liking, Reciprocity, Social proof, Consistency, Authority, Scarcity, Unity.",
+    goals: [
+      "Map coercive, reward, legitimate, expert, and referent power, plus dependence (scarcity, importance, substitutability).",
+      "Use Cialdini without money, watch the dark side of new power, and reverse the agentic shift — a speech will not undo it.",
+    ],
     parts: [
       { name: "Bases", detail: "Coercive, reward, legitimate, expert, referent. Dependence: scarcity, importance, substitutability." },
       { name: "Dark side", detail: "Self-interest, objectifying, overconfidence — worse with new power and no checks." },
@@ -234,6 +311,13 @@ export const SESSIONS: SessionGuide[] = [
       { term: "Five bases plus dependence", line: "Coercive, reward, legitimate, expert, referent. Dependence: scarcity, importance, substitutability." },
       { term: "Cialdini 7", line: "Liking, reciprocity, social proof, consistency, authority, scarcity, unity." },
       { term: "Agentic shift", line: "You become an agent of authority; going back after first compliance is hard." },
+    ],
+    ontoCase: [
+      { piece: "Coercive / reward / legitimate", fact: "Hard to fire; freeze strips rewards; title is new and prior managers spent it." },
+      { piece: "Expert / referent", fact: "Earn expertise on the floor (she already covers shifts). Referent possible from being a well-liked registered nurse, now 'management.'" },
+      { piece: "Dependence", fact: "Registered nurses are scarce, important, and poorly substitutable. Borrowed-unit coverage is a bad substitute — they can squeeze her too." },
+      { piece: "Cialdini without money", fact: "Liking and unity to dissolve cliques; public voluntary commitments from the off-site (consistency); one senior as social proof; authority as clinical expertise; scarcity of this reset window; reciprocity on brutal nights." },
+      { piece: "Agentic shift", fact: "People execute the unit’s blame rules as agents, not as independent villains. First compliance is sticky. Make a new authority script that is safe to follow." },
     ],
     builds: "Sessions 1–7 diagnose. Session 8 is how Barbara implements — and how the unit currently produces obedience to a bad culture.",
     fromPrev: "You now know what to change. Session 8 is how you move people when you cannot pay them.",

@@ -1,5 +1,6 @@
 import { APPLY, FLASHCARDS, SESSIONS } from '../data'
 import type { Route } from '../routes'
+import { SessionVisuals } from '../visuals'
 
 export function Learn({
   session,
@@ -15,13 +16,13 @@ export function Learn({
 
   return (
     <div>
-      <div className="kicker">Learn by session · infographic, memorize, example from the case</div>
+      <div className="kicker">Learn by session · diagrams from class, then the case</div>
       <h1>
         Session {s.id}: {s.title}
       </h1>
       <p className="lede">
-        Study one class at a time. Then drill this session’s cards and type a Barbara
-        Norris question that uses it.
+        {s.question} Study the frameworks as they appear on the slides, then map every box onto
+        Barbara’s unit. Drill cards and a typed question when the picture is in your head.
       </p>
       <div className="row" style={{ margin: '12px 0 18px' }}>
         {SESSIONS.map((item) => (
@@ -31,18 +32,51 @@ export function Learn({
             type="button"
             onClick={() => go('learn', item.id)}
           >
-            Session {item.id}
+            {item.id}. {item.title.split(' ')[0]}
           </button>
         ))}
       </div>
 
-      <Infographic id={s.id} />
+      <h2 className="section-title">What this session is for</h2>
+      <ol className="goals">
+        {s.goals.map((g) => (
+          <li key={g}>{g}</li>
+        ))}
+      </ol>
+
+      <h2 className="section-title">Frameworks and graphs</h2>
+      <p className="kb" style={{ marginTop: -6 }}>
+        Drawn from the class slide structures (levels, Lewin, decision process, needs, Kerr table,
+        job characteristics, crafting paths, Cialdini, obedience data) — not a photocopy of the
+        deck, so you can study them here.
+      </p>
+      <SessionVisuals id={s.id} />
 
       <div className="memo">
         <div className="kicker">Memorize this</div>
         <p className="memo-line">{s.mnemonic}</p>
         {s.formula && <p className="formula">{s.formula}</p>}
         <p style={{ marginBottom: 0 }}>{s.remember}</p>
+      </div>
+
+      <h2 className="section-title">Map every box onto Barbara’s unit</h2>
+      <div className="card" style={{ overflow: 'auto' }}>
+        <table className="plain map-table">
+          <thead>
+            <tr>
+              <th>Piece of the framework</th>
+              <th>What it looks like in the case</th>
+            </tr>
+          </thead>
+          <tbody>
+            {s.ontoCase.map((row) => (
+              <tr key={row.piece}>
+                <td>{row.piece}</td>
+                <td>{row.fact}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
       <div className="grid two" style={{ marginTop: 16 }}>
@@ -102,165 +136,6 @@ export function Learn({
         <button className="btn ghost" type="button" onClick={() => go('connect')}>
           See the full stack
         </button>
-      </div>
-    </div>
-  )
-}
-
-function Infographic({ id }: { id: number }) {
-  if (id === 1) {
-    return (
-      <div className="viz">
-        <div className="levels-org">
-          <strong>Organization</strong>
-          <span>hiring freeze · reviews · hospital culture · this unit’s reputation</span>
-          <div className="levels-group">
-            <strong>Group</strong>
-            <span>cliques · long-time nurses / newer nurses / patient care assistants · blame</span>
-            <div className="levels-ind">
-              <strong>Individual</strong>
-              <span>values · personality · exhaustion · self-efficacy</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  if (id === 2) {
-    const cells = [
-      ['Scientific', 'Research on turnover, equity, job design'],
-      ['Organizational', 'Scores, vacancies, 29 one-on-one requests'],
-      ['Experiential', 'Years as a registered nurse + Betty Nolan'],
-      ['Stakeholder', 'Nurses, patient care assistants, doctors, patients, Director of Nursing'],
-    ]
-    return (
-      <div className="viz">
-        <div className="grid two">
-          {cells.map(([t, d]) => (
-            <div key={t} className="card" style={{ padding: 16 }}>
-              <h3>{t}</h3>
-              <p className="kb">{d}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    )
-  }
-
-  if (id === 3) {
-    return (
-      <div className="viz flow">
-        <div className="card" style={{ padding: 16 }}>
-          <h3>Person (P)</h3>
-          <p>values, Big Five personality, self-efficacy</p>
-        </div>
-        <span className="flow-plus">+</span>
-        <div className="card" style={{ padding: 16 }}>
-          <h3>Environment (E)</h3>
-          <p>job, culture, freeze</p>
-        </div>
-        <span className="flow-plus">→</span>
-        <div className="card" style={{ padding: 16, borderColor: 'var(--brick)' }}>
-          <h3>Behavior (B)</h3>
-          <p>help, blame, exit</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (id === 4) {
-    const stages = [
-      ['1 Perceive', 'stereotypes, self-enhancement'],
-      ['2 Attribute', 'fundamental attribution error, availability, framing'],
-      ['3 Decide', 'intuit / maximize / satisfice'],
-      ['4 Evaluate', 'confirm, hindsight, escalate'],
-    ]
-    return (
-      <div className="viz flow wrap">
-        {stages.map((pair, i) => (
-          <div key={pair[0]} className="flow-chunk">
-            <div className="card" style={{ padding: 14 }}>
-              <h3>{pair[0]}</h3>
-              <p className="kb">{pair[1]}</p>
-            </div>
-            {i < stages.length - 1 && <span className="flow-plus">→</span>}
-          </div>
-        ))}
-      </div>
-    )
-  }
-
-  if (id === 5) {
-    const row = ['Needs', 'Specific goals', 'Hope vs reward', 'Expectancy × instrumentality × valence', 'Equity']
-    return (
-      <div className="viz flow wrap">
-        {row.map((t, i) => (
-          <div key={t} className="flow-chunk">
-            <div className="card" style={{ padding: 14, textAlign: 'center' }}>
-              <strong>{t}</strong>
-            </div>
-            {i < row.length - 1 && <span className="flow-plus">→</span>}
-          </div>
-        ))}
-      </div>
-    )
-  }
-
-  if (id === 6) {
-    return (
-      <div className="viz flow">
-        <div className="card" style={{ padding: 16 }}>
-          <h3>Five job characteristics</h3>
-          <p>Variety · Identity · Significance · Autonomy · Feedback</p>
-        </div>
-        <span className="flow-plus">→</span>
-        <div className="card" style={{ padding: 16 }}>
-          <h3>Three states</h3>
-          <p>Meaningfulness, responsibility, knowledge of results</p>
-        </div>
-        <span className="flow-plus">→</span>
-        <div className="card" style={{ padding: 16, borderColor: 'var(--brick)' }}>
-          <h3>Motivating Potential Score</h3>
-          <p>((V+I+S)/3) × A × F</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (id === 7) {
-    return (
-      <div className="grid two viz">
-        <div className="card" style={{ padding: 16 }}>
-          <h3>Passion story (heresies)</h3>
-          <p>Follow passion → find calling → bliss. Fails here: people entered a calling job and met misery.</p>
-        </div>
-        <div className="card" style={{ padding: 16, borderColor: 'var(--brick)' }}>
-          <h3>Crafting path</h3>
-          <p>Opportunity → master → improve. Perceptions · Tasks · Relationships.</p>
-        </div>
-      </div>
-    )
-  }
-
-  return (
-    <div className="viz">
-      <div className="row" style={{ marginBottom: 10 }}>
-        {['Coercive', 'Reward', 'Legitimate', 'Expert', 'Referent'].map((t) => (
-          <span key={t} className="chip">
-            {t}
-          </span>
-        ))}
-      </div>
-      <p className="kb">Dependence: scarcity × importance × substitutability — registered nurses on this unit hold this too.</p>
-      <div className="row">
-        {['Liking', 'Reciprocity', 'Social proof', 'Consistency', 'Authority', 'Scarcity', 'Unity'].map(
-          (t) => (
-            <span key={t} className="chip">
-              {t}
-            </span>
-          ),
-        )}
       </div>
     </div>
   )

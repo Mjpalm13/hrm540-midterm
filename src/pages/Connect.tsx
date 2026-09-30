@@ -17,22 +17,16 @@ export function Connect({ go }: { go: (r: Route, session?: number) => void }) {
           Sit the 12-question exam
         </button>
       </div>
-      <div className="pipeline">
-        {CONNECT_STEPS.map((step, i) => (
-          <button
-            key={step.id}
-            type="button"
-            className="pipe-step"
-            onClick={() => go('learn', step.id)}
-          >
-            <span className="pipe-n">Session {step.id}</span>
-            <span>
-              <strong>{step.ask}</strong>
-              <span className="kb" style={{ display: 'block' }}>
-                {step.does}
-              </span>
-            </span>
-            {i < CONNECT_STEPS.length - 1 && <span className="pipe-arrow" aria-hidden="true">→</span>}
+      <h2 className="section-title">The stack, as a picture</h2>
+      <p className="kb">
+        Each layer is still true when you add the next one. Click a row to open that session’s
+        diagrams.
+      </p>
+      <div className="stack-viz">
+        {CONNECT_STEPS.map((step) => (
+          <button key={step.id} type="button" onClick={() => go('learn', step.id)}>
+            <b>Session {step.id}</b>
+            {step.ask} — {step.does}
           </button>
         ))}
       </div>

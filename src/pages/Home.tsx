@@ -27,8 +27,9 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
           <div className="num">Learn by session</div>
           <h2>Infographics + resources</h2>
           <p>
-            All {SESSIONS.length} sessions: diagram, parts to name, memorize tips, a worked
-            example from Barbara’s unit, and the usual exam miss.
+            All {SESSIONS.length} sessions, in depth: the slide frameworks as diagrams (levels, Lewin,
+            decision process, Maslow, Kerr, job characteristics, crafting, Cialdini), then every box
+            mapped onto Barbara’s unit.
           </p>
         </a>
         <a className="door" href="#/connect" onClick={(e) => { e.preventDefault(); go('connect') }}>
