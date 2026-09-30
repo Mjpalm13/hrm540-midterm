@@ -38,8 +38,8 @@ export default function App() {
             <rect x="12" y="21" width="8" height="5" rx="1" fill="#f4efe4" />
           </svg>
           <div>
-            <strong>GSU Study Studio</strong>
-            <span>HRM 540 midterm</span>
+            <strong>Midterm 1 Prep</strong>
+            <span>HRM 540 · Barbara Norris</span>
           </div>
         </a>
         <nav className="nav" aria-label="Primary">

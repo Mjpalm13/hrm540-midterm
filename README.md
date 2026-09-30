@@ -1,6 +1,6 @@
-# GSU Study Studio
+# Midterm 1 Prep
 
-Interactive study site for **HRM 540** — vocab, frameworks, and written answers tied to the case *Barbara Norris: Leading Change in the General Surgery Unit*.
+Interactive study site for **HRM 540 Midterm 1** — vocab, frameworks, and written answers tied to the case *Barbara Norris: Leading Change in the General Surgery Unit*.
 
 Live: **https://mjpalm13.github.io/hrm540-midterm/**
 

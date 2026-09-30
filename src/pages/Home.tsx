@@ -9,7 +9,7 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
 
   return (
     <div>
-      <div className="kicker">HRM 540 · 12 written questions</div>
+      <div className="kicker">Midterm 1 Prep · HRM 540</div>
       <h1>Learn it, connect it, drill it, then write it onto GSU.</h1>
       <p className="lede">
         The midterm is fully written: 12 questions on the Barbara Norris case. Some items
