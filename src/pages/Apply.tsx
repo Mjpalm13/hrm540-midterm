@@ -135,7 +135,7 @@ export function Apply({
             className="exam"
             value={draft}
             onChange={(e) => save(e.target.value)}
-            placeholder="Name it → define it → GSU fact → so what."
+            placeholder="Name it → define it → a fact from the case → so what."
           />
           <div className="row" style={{ marginTop: 12 }}>
             <button className="btn brick" type="button" onClick={check}>
@@ -149,7 +149,7 @@ export function Apply({
       </div>
       {open && (
         <GradeSheet
-          title={q.session === 0 ? 'Synthesis' : `Session ${q.session} on GSU`}
+          title={q.session === 0 ? 'Synthesis' : `Session ${q.session} on the case`}
           you={draft}
           model={q.model}
           graded={graded}

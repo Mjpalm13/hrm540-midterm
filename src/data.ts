@@ -53,7 +53,7 @@ export const FLASHCARDS: Flashcard[] = [
     parts: "Three levels: individual, group/team, organizational.",
     remember: "Always name the level before you diagnose.",
     caseHook:
-      "GSU is failing at all three: burned-out individuals, a non-team, and a hospital plus unit culture of cost-cutting and blame.",
+      "The General Surgery Unit is failing at all three: burned-out individuals, a non-team, and a hospital plus unit culture of cost-cutting and blame.",
   },
   {
     id: "theory",
@@ -81,9 +81,9 @@ export const FLASHCARDS: Flashcard[] = [
     definition:
       "Using the best available evidence — not habit or anecdote alone — to make managerial decisions.",
     parts: "Scientific, organizational, experiential, stakeholder. Quantitative (numbers) vs qualitative (meaning).",
-    remember: "SOES. Pair numbers with meaning.",
+    remember: "Scientific, organizational, experiential, stakeholder. Pair numbers with meaning.",
     caseHook:
-      "Org: lowest satisfaction, highest turnover, declining patient scores. Qualitative: off-site cards. Stakeholder: nurses, PCAs, patients, DoN. Experiential: Betty Nolan.",
+      "Org: lowest satisfaction, highest turnover, declining patient scores. Qualitative: off-site cards. Stakeholder: nurses, patient care assistants, patients, Director of Nursing. Experiential: Betty Nolan.",
   },
   {
     id: "lewin",
@@ -107,23 +107,23 @@ export const FLASHCARDS: Flashcard[] = [
   {
     id: "ocean",
     session: 3,
-    term: "Big Five (OCEAN)",
+    term: "Big Five personality traits",
     definition:
       "Trait model: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism (need for stability).",
-    parts: "Trait-based (Big Five) vs type-based (MBTI, DISC). Healthy neuroticism = low stability + high conscientiousness.",
-    remember: "OCEAN. Traits predict better than types.",
+    parts: "Trait-based (Big Five) vs type-based (Myers-Briggs Type Indicator, DISC). Healthy neuroticism = low stability + high conscientiousness.",
+    remember: "Openness, conscientiousness, extraversion, agreeableness, neuroticism. Traits predict better than types.",
     caseHook:
-      "A highly conscientious nurse will still look unreliable if the environment dumps float-pool coverage on her. Do not FAE the person.",
+      "A highly conscientious nurse will still look unreliable if the environment dumps float-pool coverage on her. Do not fundamental attribution error the person.",
   },
   {
     id: "mbti",
     session: 3,
-    term: "MBTI four pairs",
+    term: "Myers-Briggs Type Indicator four pairs",
     definition:
       "Type inventory of preferences: energy (E/I), perceiving (S/N), deciding (T/F), ambiguity (J/P).",
     remember: "Energy, perceive, decide, closure. Weakness: Barnum effect.",
     caseHook:
-      "Use MBTI only as a language for how we prefer to work, never as hiring or performance. GSU already has favoritism.",
+      "Use Myers-Briggs Type Indicator only as a language for how we prefer to work, never as hiring or performance. The unit already has favoritism.",
   },
   {
     id: "barnum",
@@ -142,7 +142,7 @@ export const FLASHCARDS: Flashcard[] = [
       "Choosing among alternatives, including inaction. Programmed vs nonprogrammed; strategic / tactical / operational.",
     remember: "Programmed = frequent. Nonprogrammed = surprise. Strategic = trajectory. Tactical = how. Operational = daily.",
     caseHook:
-      "Turning GSU around is a nonprogrammed tactical decision under crisis. Staffing a shift is operational. The freeze is a strategic constraint.",
+      "Turning the General Surgery Unit around is a nonprogrammed tactical decision under crisis. Staffing a shift is operational. The freeze is a strategic constraint.",
   },
   {
     id: "three-models",
@@ -152,7 +152,7 @@ export const FLASHCARDS: Flashcard[] = [
       "Intuition: fast, affect-charged, holistic. Rational: know the goal, all options, maximize. Bounded: imperfect info, cognitive limits, satisfice.",
     remember: "Intuition only when time pressure + predictable environment + domain expertise.",
     caseHook:
-      "Barbara has time pressure but GSU is not yet predictable for her, and she lacks manager-domain expertise. She should satisfice.",
+      "Barbara has time pressure but the General Surgery Unit is not yet predictable for her, and she lacks manager-domain expertise. She should satisfice.",
   },
   {
     id: "perception",
@@ -160,7 +160,7 @@ export const FLASHCARDS: Flashcard[] = [
     term: "Perceptual traps",
     definition:
       "Perception is detecting and interpreting stimuli. Traps: self-enhancement, stereotypes, self-fulfilling prophecy.",
-    remember: "PADE: Perceive → Attribute → Decide → Evaluate.",
+    remember: "Perceive → attribute → decide → evaluate.",
     caseHook:
       "Seniors stereotype juniors as pests; juniors then stop asking and look incompetent. Megan Mahoney's complaint is this trap.",
   },
@@ -169,11 +169,11 @@ export const FLASHCARDS: Flashcard[] = [
     session: 4,
     term: "Attribution traps",
     definition:
-      "Causal stories we tell. Self-serving: own success = me, failure = situation. FAE: others' behavior = who they are.",
+      "Causal stories we tell. Self-serving: own success = me, failure = situation. fundamental attribution error: others' behavior = who they are.",
     parts: "Also availability, regression to the mean, anchoring, framing.",
     remember: "Me = situation when I fail. You = character when you fail.",
     caseHook:
-      "Staff blame lazy juniors (FAE) instead of staffing, freeze, and float pool. Barbara may self-serve about how hard she is trying.",
+      "Staff blame lazy juniors (fundamental attribution error) instead of staffing, freeze, and nurses borrowed from other units. Barbara may self-serve about how hard she is trying.",
   },
   {
     id: "post-decision",
@@ -182,7 +182,7 @@ export const FLASHCARDS: Flashcard[] = [
     definition: "Confirmation bias, hindsight bias, and escalation of commitment.",
     remember: "See what you already believe. 'I knew it.' Throw good effort after a failing plan.",
     caseHook:
-      "If Barbara doubles down on endless 1:1s because she already invested a month, that is escalation. Premortem it.",
+      "If Barbara doubles down on endless one-on-one meetings because she already invested a month, that is escalation. Premortem it.",
   },
   {
     id: "motivation",
@@ -197,22 +197,22 @@ export const FLASHCARDS: Flashcard[] = [
   {
     id: "needs",
     session: 5,
-    term: "Need theories: Maslow, ERG, two-factor",
+    term: "Need theories: Maslow, Existence-Relatedness-Growth, two-factor",
     definition:
-      "People work to satisfy needs. Maslow is hierarchical. ERG is not, and frustration-regression can drop people down. Herzberg: hygiene removes dissatisfaction; motivators create satisfaction.",
+      "People work to satisfy needs. Maslow is hierarchical. Existence-Relatedness-Growth is not, and frustration-regression can drop people down. Herzberg: hygiene removes dissatisfaction; motivators create satisfaction.",
     remember: "Fix hygiene first or motivators will not land.",
     caseHook:
-      "Freeze, no OT, hostility = broken existence/hygiene. Recognition and development already missing = no motivators.",
+      "Freeze, no overtime, hostility = broken existence/hygiene. Recognition and development already missing = no motivators.",
   },
   {
     id: "goals",
     session: 5,
-    term: "Goal-setting / SMART",
+    term: "Goal-setting (specific, measurable, attainable, relevant, time-bound)",
     definition:
-      "Specific, challenging goals plus feedback raise performance. SMART: specific, measurable, attainable, relevant, time-bound.",
+      "Specific, challenging goals plus feedback raise performance. Make them specific, measurable, attainable, relevant, and time-bound.",
     remember: "'Turn the unit around fast' is a wish, not a goal.",
     caseHook:
-      "Translate the Director's demand: zero RN resignations this quarter; a 15-minute huddle every shift; publish review criteria in 30 days.",
+      "Translate the Director's demand: zero registered-nurse resignations this quarter; a 15-minute huddle every shift; publish review criteria in 30 days.",
   },
   {
     id: "reinforcement",
@@ -222,7 +222,7 @@ export const FLASHCARDS: Flashcard[] = [
       "People do what is rewarded. Focus: rewarded activity crowds out the rest. Alignment (Kerr): we hope for A, reward B. Controllability: reward results the person cannot control.",
     remember: "If it is not rewarded, it is optional.",
     caseHook:
-      "Hospital hopes for teamwork and quality; freeze + no OT + mystery reviews reward survive your shift.",
+      "Hospital hopes for teamwork and quality; freeze + no overtime + mystery reviews reward survive your shift.",
   },
   {
     id: "expectancy",
@@ -232,7 +232,7 @@ export const FLASHCARDS: Flashcard[] = [
       "Motivation = Expectancy (effort→performance) × Instrumentality (performance→outcome) × Valence (I want it). Any zero kills motivation.",
     remember: "Can I? Will it pay? Do I care? Multiplication, not addition.",
     caseHook:
-      "E: cannot perform with this census and float pool. I: reviews are a mystery. V: extra uncompensated shifts can be unwanted.",
+      "E: cannot perform with this census and nurses borrowed from other units. I: reviews are a mystery. V: extra uncompensated shifts can be unwanted.",
   },
   {
     id: "equity",
@@ -260,9 +260,9 @@ export const FLASHCARDS: Flashcard[] = [
     term: "Scientific management",
     definition:
       "Minimize waste by finding the most efficient method. People are factors of production; managers plan the work.",
-    remember: "Efficiency lens. Opposite of JCM's human lens.",
+    remember: "Efficiency lens. Opposite of Job Characteristics Model's human lens.",
     caseHook:
-      "The freeze treats nurses as interchangeable production factors (hence float pool). That crushes intrinsic motivation.",
+      "The freeze treats nurses as interchangeable production factors (hence nurses borrowed from other units). That crushes intrinsic motivation.",
   },
   {
     id: "jcm",
@@ -270,20 +270,20 @@ export const FLASHCARDS: Flashcard[] = [
     term: "Job Characteristics Model",
     definition:
       "Structure work so people experience meaningfulness, responsibility, and knowledge of results — which raise intrinsic motivation.",
-    parts: "VISAF: Variety, Identity, Significance, Autonomy, Feedback.",
-    remember: "Nursing is high significance; GSU is low on the rest.",
+    parts: "Variety, identity, significance, autonomy, feedback.",
+    remember: "Nursing is high significance; the General Surgery Unit is low on the rest.",
     caseHook:
-      "Task significance is sky-high. Identity fragments across shifts and float RNs. Autonomy and feedback are crushed.",
+      "Task significance is sky-high. Identity fragments across shifts and nurses borrowed from other units. Autonomy and feedback are crushed.",
   },
   {
     id: "mps",
     session: 6,
     term: "Motivating Potential Score",
     definition:
-      "MPS = ((Variety + Identity + Significance) / 3) × Autonomy × Feedback. If autonomy or feedback is near 0, MPS collapses.",
+      "Motivating Potential Score = ((Variety + Identity + Significance) / 3) × Autonomy × Feedback. If autonomy or feedback is near 0, the Motivating Potential Score collapses.",
     remember: "Zeros on the multipliers are fatal.",
     caseHook:
-      "Heroic significance cannot save MPS if Barbara never gives clear feedback and nurses cannot control assignments. Raise A and F first.",
+      "Heroic significance cannot save the Motivating Potential Score if Barbara never gives clear feedback and nurses cannot control assignments. Raise autonomy and feedback first.",
   },
   {
     id: "calling",
@@ -293,7 +293,7 @@ export const FLASHCARDS: Flashcard[] = [
       "A calling is deeply fulfilling work believed to make the world better. Heresies: luck-only; one true calling; work will be bliss; the world will notice; all meaning lives at work.",
     remember: "Finding a calling is not a scavenger hunt. Meaning is made, often at a cost.",
     caseHook:
-      "GSU nurses entered a calling profession and met misery. That does not mean they chose wrong. The job and culture blocked meaning.",
+      "The General Surgery Unit nurses entered a calling profession and met misery. That does not mean they chose wrong. The job and culture blocked meaning.",
   },
   {
     id: "passion",
@@ -304,7 +304,7 @@ export const FLASHCARDS: Flashcard[] = [
     parts: "Craft perceptions, tasks, and relationships.",
     remember: "Passion is often the feeling generated by mastery.",
     caseHook:
-      "Barbara cannot find everyone a new calling. She can help seniors mentor, let nurses own a care bundle, and reframe GSU as protecting surgical patients together.",
+      "Barbara cannot find everyone a new calling. She can help seniors mentor, let nurses own a care bundle, and reframe the General Surgery Unit as protecting surgical patients together.",
   },
   {
     id: "power",
@@ -312,9 +312,9 @@ export const FLASHCARDS: Flashcard[] = [
     term: "Power and its bases",
     definition:
       "Capacity of A to get B to act as A wishes. Bases: coercive, reward, legitimate, expert, referent. Dependence: scarcity, importance, substitutability.",
-    remember: "CRLER + SIS. Title is only legitimate power. Freeze strips reward power.",
+    remember: "Coercive, reward, legitimate, expert, referent plus dependence (scarcity, importance, substitutability). Title is only legitimate power. Freeze strips reward power.",
     caseHook:
-      "Barbara has new legitimate power, weak reward/coercive power, and must build expert and referent power. RNs are scarce and hard to substitute — they have power too.",
+      "Barbara has new legitimate power, weak reward/coercive power, and must build expert and referent power. Registered nurses are scarce and hard to substitute — they have power too.",
   },
   {
     id: "power-effects",
@@ -352,10 +352,10 @@ export const APPLY: ApplyQuestion[] = [
     id: "q1",
     session: 1,
     prompt:
-      "GSU has the lowest employee satisfaction and highest turnover at EMU, plus declining patient satisfaction. Diagnose this at all three levels of analysis. Why would a purely individual-level answer be incomplete?",
+      "The General Surgery Unit has the lowest employee satisfaction and highest turnover at Eastern Massachusetts University Hospital, plus declining patient satisfaction. Diagnose this at all three levels of analysis. Why would a purely individual-level answer be incomplete?",
     stems: "At the individual level… At the group level… At the organizational level… Therefore Barbara should…",
     model:
-      "Individual: exhaustion, low self-efficacy as a new manager and as juniors called pests, values around patient care colliding with daily experience. Group: no teamwork, seniors vs juniors vs PCAs, confrontation and favoritism as norms. Organization: freeze, no overtime, mystery performance reviews, physicians treating nurses as order-takers, prior weak management. A personality-only fix (replace bad apples) ignores that the same people might function on Betty Nolan's well-run unit. Session 1 already requires you to change the level of the intervention.",
+      "Individual: exhaustion, low self-efficacy as a new manager and as newer nurses called pests, values around patient care colliding with daily experience. Group: no teamwork, long-time nurses versus newer nurses versus patient care assistants, confrontation and favoritism as norms. Organization: freeze, no overtime, mystery performance reviews, physicians treating nurses as order-takers, prior weak management. A personality-only fix (replace bad apples) ignores that the same people might function on Betty Nolan's well-run unit. Session 1 already requires you to change the level of the intervention.",
     concepts: [
       { id: "individual", label: "Individual level", aliases: ["individual", "self-efficacy", "exhaust", "personality", "values"] },
       { id: "group", label: "Group / team level", aliases: ["group", "team", "clique", "senior", "junior", "favoritism", "blame"] },
@@ -369,7 +369,7 @@ export const APPLY: ApplyQuestion[] = [
       "Barbara is drowning in complaints after the off-site. Using the four types of evidence, what does she already have, what is she over-weighting, and what should she collect next?",
     stems: "Scientific evidence would say… Organizational evidence already shows… The off-site is… Stakeholder evidence she is missing is…",
     model:
-      "Org evidence: satisfaction, turnover (2 RNs gone in her first month; 3 in the prior six), patient scores, 29 one-to-one requests, staffing math. Qualitative stakeholder evidence: anonymous cards — rich meaning, but a vent session is not a random sample and can trigger availability bias. Experiential: her RN expertise plus Nolan's model; she lacks manager-domain reps, so do not treat gut as data. Scientific: research on equity, JCM, and influence. Next: code the cards into categories, pair each with a metric, and write hypotheses rather than trying to fix every card.",
+      "Org evidence: satisfaction, turnover (2 registered nurses gone in her first month; 3 in the prior six), patient scores, 29 one-to-one requests, staffing math. Qualitative stakeholder evidence: anonymous cards — rich meaning, but a vent session is not a random sample and can trigger availability bias. Experiential: her registered-nurse expertise plus Nolan's model; she lacks manager-domain reps, so do not treat gut as data. Scientific: research on equity, Job Characteristics Model, and influence. Next: code the cards into categories, pair each with a metric, and write hypotheses rather than trying to fix every card.",
     concepts: [
       { id: "sci", label: "Scientific evidence", aliases: ["scientific", "research", "published", "jcm", "equity"] },
       { id: "org", label: "Organizational evidence", aliases: ["organiz", "turnover", "satisfaction", "score", "metric", "data"] },
@@ -382,7 +382,7 @@ export const APPLY: ApplyQuestion[] = [
     session: 3,
     prompt:
       "Apply B = f(P, E) and the notion of fit to (a) Barbara herself and (b) a senior nurse who hazes juniors. What should Barbara change — P or E — and why?",
-    stems: "Barbara's P is… GSU's E is… Fit fails because… Therefore the lever is…",
+    stems: "Barbara's P is… the General Surgery Unit's E is… Fit fails because… Therefore the lever is…",
     model:
       "Barbara: high agreeableness / referent potential and a new MS in nursing admin (P) in an environment of crisis, freeze, and blame (E). Behavior (overwhelm, staying from 6:30am past 10pm) is the interaction, not 'she is weak.' Senior nurse: personality may include low agreeableness, but E rewards hazing (status, control of scarce help). Changing P (personality workshop) is slow and Barnum-prone. Change E: make mentoring a visible, praised task; stop assigning the hazer unofficial gatekeeper power; appeal to shared terminal value of patient safety. Avoid demonizing.",
     concepts: [
@@ -395,10 +395,10 @@ export const APPLY: ApplyQuestion[] = [
     id: "q4",
     session: 4,
     prompt:
-      "Is turning GSU around a programmed or nonprogrammed decision, and which decision model should Barbara use? Name two traps already visible in her first month and one debiasing tool for each.",
+      "Is turning the unit around a programmed or nonprogrammed decision, and which decision model should Barbara use? Name two traps already visible in her first month and one debiasing tool for each.",
     stems: "This is a ___ decision because… Intuition is / is not appropriate because… Trap 1… Tool 1…",
     model:
-      "Nonprogrammed, tactical, under crisis. Intuition requires time pressure AND a predictable environment AND domain expertise. She has the first, not the other two — so bounded rationality: satisfice on a few moves. Traps: FAE (staff as lazy rather than under-resourced); availability (loudest off-site stories drive the agenda); possible escalation if she keeps adding 1:1s; framing the freeze as yes/no. Tools: outsider/future-CNO view; premortem; 3 futures × 3 objectives × 3 options; devil's advocate; tripwire if two more RNs give notice.",
+      "Nonprogrammed, tactical, under crisis. Intuition requires time pressure AND a predictable environment AND domain expertise. She has the first, not the other two — so bounded rationality: satisfice on a few moves. Traps: fundamental attribution error (staff as lazy rather than under-resourced); availability (loudest off-site stories drive the agenda); possible escalation if she keeps adding one-on-one meetings; framing the freeze as yes/no. Tools: outsider/future chief nursing officer view; premortem; 3 futures × 3 objectives × 3 options; devil's advocate; tripwire if two more registered nurses give notice.",
     concepts: [
       { id: "nonprog", label: "Nonprogrammed decision", aliases: ["nonprogrammed", "non-programmed", "crisis", "tactical"] },
       { id: "bounded", label: "Bounded rationality / satisfice", aliases: ["bounded", "satisfice", "good enough", "intuition"] },
@@ -410,9 +410,9 @@ export const APPLY: ApplyQuestion[] = [
     session: 4,
     prompt:
       "Megan Mahoney says senior nurses make her feel she does everything wrong, will not address her directly, and called her a pest. Map this onto stereotypes, self-fulfilling prophecy, and fundamental attribution error.",
-    stems: "The stereotype is… It becomes self-fulfilling when… Seniors are committing FAE by…",
+    stems: "The stereotype is… It becomes self-fulfilling when… Seniors are committing fundamental attribution error by…",
     model:
-      "Stereotype: new nurses are incompetent pests. Self-fulfilling: they withhold teaching → she asks more or stops asking → she looks either needy or unskilled → stereotype confirmed. FAE: seniors attribute her questions to her disposition (pest) and downplay the situation (no orientation, short staff, hostile climate). Barbara's job is to change the situation (structured precepting, public norms for feedback) so the prophecy cannot run.",
+      "Stereotype: new nurses are incompetent pests. Self-fulfilling: they withhold teaching → she asks more or stops asking → she looks either needy or unskilled → stereotype confirmed. fundamental attribution error: seniors attribute her questions to her disposition (pest) and downplay the situation (no orientation, short staff, hostile climate). Barbara's job is to change the situation (structured precepting, public norms for feedback) so the prophecy cannot run.",
     concepts: [
       { id: "stereo", label: "Stereotype", aliases: ["stereotype", "pest", "incompetent", "junior"] },
       { id: "sfp", label: "Self-fulfilling prophecy", aliases: ["self-fulfilling", "prophecy", "withhold", "confirm"] },
@@ -423,10 +423,10 @@ export const APPLY: ApplyQuestion[] = [
     id: "q6",
     session: 5,
     prompt:
-      "The Director wants the unit turned around fast. There is a hiring freeze and no overtime. Diagnose GSU with Herzberg, Kerr's alignment problem, expectancy theory, and equity theory.",
+      "The Director wants the unit turned around fast. There is a hiring freeze and no overtime. Diagnose the General Surgery Unit with Herzberg, Kerr's alignment problem, expectancy theory, and equity theory.",
     stems: "Hygiene vs motivators… We hope for X but reward Y… E is… I is… V is… Compared with… they restore equity by…",
     model:
-      "Herzberg: hygiene is wrecked (conditions, staffing, supervision, peer relations, opaque policy). Motivators (recognition, achievement, growth, the work itself) are blocked by mystery reviews and hostility. Kerr: hope for teamwork, quality, surfacing problems; reward individual throughput, keeping your head down, and favoritism. Expectancy: E low (cannot perform with this load/float pool); I low (performance does not map to reviews, pay, or thanks); V mixed (patient care is valued, extra uncompensated shifts are not). Equity: same outcomes for unequal inputs plus favoritism; responses already include exit. Barbara's realistic levers: I and equity via transparent reviews; E via better assignments; V via restoring meaning since money is frozen.",
+      "Herzberg: hygiene is wrecked (conditions, staffing, supervision, peer relations, opaque policy). Motivators (recognition, achievement, growth, the work itself) are blocked by mystery reviews and hostility. Kerr: hope for teamwork, quality, surfacing problems; reward individual throughput, keeping your head down, and favoritism. Expectancy: E low (cannot perform with this load and nurses borrowed from other units); I low (performance does not map to reviews, pay, or thanks); V mixed (patient care is valued, extra uncompensated shifts are not). Equity: same outcomes for unequal inputs plus favoritism; responses already include exit. Barbara's realistic levers: I and equity via transparent reviews; E via better assignments; V via restoring meaning since money is frozen.",
     concepts: [
       { id: "herzberg", label: "Herzberg hygiene / motivators", aliases: ["herzberg", "hygiene", "motivator", "dissatisf"] },
       { id: "kerr", label: "Alignment / Kerr", aliases: ["kerr", "alignment", "hope", "reward"] },
@@ -438,12 +438,12 @@ export const APPLY: ApplyQuestion[] = [
     id: "q7",
     session: 5,
     prompt:
-      "Using ERG's frustration-regression hypothesis, explain why nurses who cannot get growth or even relatedness at GSU may start fighting over schedules, supplies, or who is the favorite.",
+      "Using Existence-Relatedness-Growth's frustration-regression hypothesis, explain why nurses who cannot get growth or even relatedness on the General Surgery Unit may start fighting over schedules, supplies, or who is the favorite.",
     stems: "Growth is blocked by… Relatedness is blocked by… Frustration-regression predicts they will…",
     model:
-      "Growth (development, esteem from good reviews) is blocked. Relatedness (belonging, decent peer/physician relationships) is blocked by cliques and blame. ERG says people are not stuck waiting on a hierarchy; they regress to existence needs — hours, assignments, who covers the worst patients, who gets the float. That looks like pettiness; theoretically it is regression. Intervention: reopen relatedness (huddles, mixed-seniority pairs) even before growth opportunities exist.",
+      "Growth (development, esteem from good reviews) is blocked. Relatedness (belonging, decent peer/physician relationships) is blocked by cliques and blame. Existence-Relatedness-Growth says people are not stuck waiting on a hierarchy; they regress to existence needs — hours, assignments, who covers the worst patients, who gets a nurse borrowed from another unit. That looks like pettiness; theoretically it is regression. Intervention: reopen relatedness (huddles, mixed-seniority pairs) even before growth opportunities exist.",
     concepts: [
-      { id: "erg", label: "ERG", aliases: ["erg", "existence", "relatedness", "growth"] },
+      { id: "erg", label: "Existence-Relatedness-Growth", aliases: ["erg", "existence", "relatedness", "growth"] },
       { id: "fr", label: "Frustration-regression", aliases: ["frustration", "regression", "regress"] },
       { id: "exist", label: "Existence fights", aliases: ["schedule", "assignment", "favorite", "supplies", "hours"] },
     ],
@@ -452,27 +452,27 @@ export const APPLY: ApplyQuestion[] = [
     id: "q8",
     session: 6,
     prompt:
-      "Score GSU nursing qualitatively on VISAF and explain why MPS can be low even though task significance is very high. What two characteristics should Barbara raise first, given the formula?",
-    stems: "V… I… S… A… F… Because MPS = … the fatal factors are…",
+      "Score nursing on this unit qualitatively on variety, identity, significance, autonomy, and feedback and explain why the Motivating Potential Score can be low even though task significance is very high. What two characteristics should Barbara raise first, given the formula?",
+    stems: "V… I… S… A… F… Because Motivating Potential Score = … the fatal factors are…",
     model:
-      "Significance: high (surgical patients). Variety: mixed-to-low because chaos crowds skilled nursing. Identity: low — care chopped across shifts and unfamiliar float RNs. Autonomy: low — cannot control staffing, assignments, OT. Feedback: low or punishing. MPS = ((V+I+S)/3) × A × F. High S is averaged with weak V and I, then multiplied by near-zero A and F, so MPS collapses. Raise autonomy and feedback first — they are the multipliers. Then rebuild identity via continuity with patients.",
+      "Significance: high (surgical patients). Variety: mixed-to-low because chaos crowds skilled nursing. Identity: low — care chopped across shifts and unfamiliar nurses borrowed from other units. Autonomy: low — cannot control staffing, assignments, overtime. Feedback: low or punishing. Motivating Potential Score = ((V+I+S)/3) × A × F. High S is averaged with weak V and I, then multiplied by near-zero A and F, so the Motivating Potential Score collapses. Raise autonomy and feedback first — they are the multipliers. Then rebuild identity via continuity with patients.",
     concepts: [
-      { id: "visaf", label: "VISAF named", aliases: ["variety", "identity", "significance", "autonomy", "feedback", "visaf"] },
-      { id: "mps", label: "MPS formula", aliases: ["mps", "formula", "multiply", "((", "/ 3", "/3"] },
-      { id: "multi", label: "Raise A and F first", aliases: ["autonomy", "feedback", "multiplier", "zero"] },
+      { id: "visaf", label: "Five job characteristics named", aliases: ["variety", "identity", "significance", "autonomy", "feedback", "visaf"] },
+      { id: "mps", label: "Motivating Potential Score formula", aliases: ["mps", "formula", "multiply", "((", "/ 3", "/3"] },
+      { id: "multi", label: "Raise autonomy and feedback first", aliases: ["autonomy", "feedback", "multiplier", "zero"] },
     ],
   },
   {
     id: "q9",
     session: 6,
     prompt:
-      "How is the hospital's use of the float pool an expression of scientific management, and how does that collide with the Job Characteristics Model?",
-    stems: "Scientific management assumes… The float pool treats nurses as… JCM predicts…",
+      "How is the hospital's use of nurses borrowed from other units an expression of scientific management, and how does that collide with the Job Characteristics Model?",
+    stems: "Scientific management assumes… Nurses borrowed from other units treat people as… Job Characteristics Model predicts…",
     model:
-      "Scientific management treats people as interchangeable factors and has managers design the one best method. Float RNs maximize coverage efficiency on paper. JCM says motivation depends on perceived characteristics of this job — identity, relationships, feedback from a known team. Substitutes who do not know GSU destroy identity and force regulars to re-teach. Barbara cannot end the freeze, but she can reduce the damage: better orientation for floats, pair them, keep a short GSU standard work that protects identity rather than only speed.",
+      "Scientific management treats people as interchangeable factors and has managers design the one best method. Nurses borrowed from other units maximize coverage efficiency on paper. The Job Characteristics Model says motivation depends on perceived characteristics of this job — identity, relationships, feedback from a known team. Substitutes who do not know this unit destroy identity and force regulars to re-teach. Barbara cannot end the freeze, but she can reduce the damage: better orientation for those substitutes, pair them, keep a short standard-work sheet for this unit that protects identity rather than only speed.",
     concepts: [
       { id: "sci", label: "Scientific management", aliases: ["scientific management", "interchangeable", "factor of production", "efficiency", "taylor"] },
-      { id: "jcm", label: "JCM collision", aliases: ["jcm", "identity", "job characteristic", "intrinsic"] },
+      { id: "jcm", label: "Job Characteristics Model collision", aliases: ["jcm", "identity", "job characteristic", "intrinsic"] },
       { id: "float", label: "Float pool", aliases: ["float", "substitute", "coverage"] },
     ],
   },
@@ -483,7 +483,7 @@ export const APPLY: ApplyQuestion[] = [
       "A nurse tells Barbara, 'I thought nursing was my calling, so I must have chosen wrong.' Correct this using the five heresies and then give one crafting move in each of perceptions, tasks, and relationships.",
     stems: "The heresy here is… A better truth is… Perception craft… Task craft… Relationship craft…",
     model:
-      "Heresies in play: one true calling, work will be bliss, meaning lives only at work, maybe luck. Truths: you can do good work in a hard assignment; meaning has a price; work is one stage. Perception: narrate GSU as protecting post-op patients through a crisis, not as a dumping ground. Tasks: take a bounded extra (precepting checklist, pain protocol owner) rather than infinite extra shifts. Relationships: one mentoring pair or a huddle ally so the social fabric is not only cliques. Passion can follow mastery of those crafts.",
+      "Heresies in play: one true calling, work will be bliss, meaning lives only at work, maybe luck. Truths: you can do good work in a hard assignment; meaning has a price; work is one stage. Perception: narrate the General Surgery Unit as protecting post-op patients through a crisis, not as a dumping ground. Tasks: take a bounded extra (precepting checklist, pain protocol owner) rather than infinite extra shifts. Relationships: one mentoring pair or a huddle ally so the social fabric is not only cliques. Passion can follow mastery of those crafts.",
     concepts: [
       { id: "heresy", label: "Calling heresies", aliases: ["heresy", "calling", "bliss", "passion", "one true"] },
       { id: "perc", label: "Perception crafting", aliases: ["perception", "narrate", "reframe", "story"] },
@@ -495,13 +495,13 @@ export const APPLY: ApplyQuestion[] = [
     id: "q11",
     session: 8,
     prompt:
-      "Map Barbara's power using CRLER and dependence (SIS). Then argue why Cialdini will matter more than coercive or reward power for the next 90 days.",
+      "Map Barbara's power using the five bases (coercive, reward, legitimate, expert, referent) and dependence (scarcity, importance, substitutability). Then argue why Cialdini will matter more than coercive or reward power for the next 90 days.",
     stems: "Coercive… Reward… Legitimate… Expert… Referent… Nurses' dependence power is… Therefore influence tactic X fits because…",
     model:
-      "Coercive: weak (hard to terminate, culture already fearful). Reward: stripped (freeze, no OT). Legitimate: she has the title, but prior managers spent it. Expert: strong if she shows clinical competence on the floor. Referent: possible because she was a well-liked RN, but she is now management. Dependence: RNs are scarce, critically important, and poorly substitutable — staff can squeeze her. Use liking, unity, consistency (lock in voluntary public commitments from the off-site), social proof (one respected senior), authority-as-expertise, reciprocity on brutal shifts, and scarcity of this reset window.",
+      "Coercive: weak (hard to terminate, culture already fearful). Reward: stripped (freeze, no overtime). Legitimate: she has the title, but prior managers spent it. Expert: strong if she shows clinical competence on the floor. Referent: possible because she was a well-well-liked registered nurse, but she is now management. Dependence: registered nurses are scarce, critically important, and poorly substitutable — staff can squeeze her. Use liking, unity, consistency (lock in voluntary public commitments from the off-site), social proof (one respected senior), authority-as-expertise, reciprocity on brutal shifts, and scarcity of this reset window.",
     concepts: [
       { id: "crler", label: "Power bases", aliases: ["coercive", "reward", "legitimate", "expert", "referent", "crler"] },
-      { id: "sis", label: "Dependence / SIS", aliases: ["scarce", "scarcity", "important", "substitut", "dependence"] },
+      { id: "sis", label: "Dependence (scarcity, importance, substitutability)", aliases: ["scarce", "scarcity", "important", "substitut", "dependence"] },
       { id: "cialdini", label: "Cialdini tactics", aliases: ["cialdini", "liking", "reciprocity", "social proof", "consistency", "unity", "authority"] },
     ],
   },
@@ -512,7 +512,7 @@ export const APPLY: ApplyQuestion[] = [
       "Use the agentic shift to explain why 'just tell them to stop the blame culture' will fail. What would reverse the shift?",
     stems: "Staff currently see themselves as… First compliance was… To restore autonomy Barbara must…",
     model:
-      "People in GSU's authority system execute the local rules (blame, favorites, do not surface bad news) as agents, not as independent moral actors. Once they have complied, going back is hard. A speech does not restore autonomy. Reverse it by changing who is the authority to obey: Barbara plus a few opinion leaders publicly model a different rule, make the new rule easy to comply with first (huddle script, no-shame question policy), and give cover so dissent from toxicity is not career suicide. Checks on Barbara's own new power keep her from becoming the next authority people agentically obey.",
+      "People in the General Surgery Unit's authority system execute the local rules (blame, favorites, do not surface bad news) as agents, not as independent moral actors. Once they have complied, going back is hard. A speech does not restore autonomy. Reverse it by changing who is the authority to obey: Barbara plus a few opinion leaders publicly model a different rule, make the new rule easy to comply with first (huddle script, no-shame question policy), and give cover so dissent from toxicity is not career suicide. Checks on Barbara's own new power keep her from becoming the next authority people agentically obey.",
     concepts: [
       { id: "agentic", label: "Agentic shift", aliases: ["agentic", "agent", "authority system", "obey", "autonomy"] },
       { id: "comply", label: "Sticky first compliance", aliases: ["compli", "hard to go back", "sticky"] },
@@ -526,13 +526,13 @@ export const APPLY: ApplyQuestion[] = [
       "Synthesis: Write an action plan that uses at least one idea from Sessions 2, 4, 5, 6, and 8. Show how they build, not a laundry list.",
     stems: "I will decide using… I will not trust intuition because… The motivation diagnosis is… The job-design lever is… Influence without money looks like…",
     model:
-      "Evidence (S2) codes off-site themes and pairs them with turnover/satisfaction so she does not chase the loudest story (S4 availability). Because the environment is unpredictable and she is new, she satisfices: three objectives (stop RN loss, restore basic relatedness, publish review criteria) and three options each (S4 3×3×3), with a tripwire. Motivation (S5): hygiene/relatedness first; fix instrumentality and equity with transparent reviews; do not pretend money is coming. Job design (S6): raise the MPS multipliers — autonomy over assignments and weekly feedback — plus identity via continuity. Influence (S8): referent/expert on the floor, unity language, public commitments, social proof from one senior. Sequence: diagnose with evidence → choose boundedly → move people with systems and the job → implement with power that is not carrots.",
+      "Evidence (Session 2) codes off-site themes and pairs them with turnover/satisfaction so she does not chase the loudest story (Session 4 availability). Because the environment is unpredictable and she is new, she satisfices: three objectives (stop registered-nurse resignations, restore basic relatedness, publish review criteria) and three options each (Session 4: 3 futures × 3 objectives × 3 options), with a tripwire. Motivation (Session 5): hygiene/relatedness first; fix instrumentality and equity with transparent reviews; do not pretend money is coming. Job design (Session 6): raise the Motivating Potential Score multipliers — autonomy over assignments and weekly feedback — plus identity via continuity. Influence (Session 8): referent/expert on the floor, unity language, public commitments, social proof from one senior. Sequence: diagnose with evidence → choose boundedly → move people with systems and the job → implement with power that is not carrots.",
     concepts: [
-      { id: "s2", label: "Evidence (S2)", aliases: ["evidence", "off-site", "code", "metric"] },
-      { id: "s4", label: "Decision (S4)", aliases: ["satisfice", "bounded", "premortem", "tripwire", "3x3", "3×3"] },
-      { id: "s5", label: "Motivation (S5)", aliases: ["hygiene", "equity", "instrumentality", "expectancy"] },
-      { id: "s6", label: "Job design (S6)", aliases: ["mps", "autonomy", "feedback", "jcm", "identity"] },
-      { id: "s8", label: "Power (S8)", aliases: ["referent", "cialdini", "unity", "influence", "expert"] },
+      { id: "s2", label: "Evidence (Session 2)", aliases: ["evidence", "off-site", "code", "metric"] },
+      { id: "s4", label: "Decision (Session 4)", aliases: ["satisfice", "bounded", "premortem", "tripwire", "3x3", "3×3"] },
+      { id: "s5", label: "Motivation (Session 5)", aliases: ["hygiene", "equity", "instrumentality", "expectancy"] },
+      { id: "s6", label: "Job design (Session 6)", aliases: ["mps", "autonomy", "feedback", "jcm", "identity"] },
+      { id: "s8", label: "Power (Session 8)", aliases: ["referent", "cialdini", "unity", "influence", "expert"] },
     ],
   },
 ]
@@ -545,7 +545,7 @@ export const QUIZ: McQuestion[] = [
     choices: [
       { id: "a", text: "Treating an organizational and group problem as only individual" },
       { id: "b", text: "Using qualitative data when she needed quantitative data" },
-      { id: "c", text: "Applying scientific management instead of ERG theory" },
+      { id: "c", text: "Applying scientific management instead of Existence-Relatedness-Growth theory" },
       { id: "d", text: "Using referent power when she needed coercive power" },
     ],
     correct: "a",
@@ -569,7 +569,7 @@ export const QUIZ: McQuestion[] = [
     session: 3,
     prompt: "B = f(P, E) implies Barbara should mostly:",
     choices: [
-      { id: "a", text: "Send everyone to MBTI so types will match" },
+      { id: "a", text: "Send everyone to Myers-Briggs Type Indicator so types will match" },
       { id: "b", text: "Change the environment that currently rewards hazing and favoritism" },
       { id: "c", text: "Wait for the freeze to lift before doing anything" },
       { id: "d", text: "Hire only highly agreeable people" },
@@ -580,10 +580,10 @@ export const QUIZ: McQuestion[] = [
   {
     id: "m4",
     session: 3,
-    prompt: "Which is a terminal value in the GSU fight between seniors and juniors?",
+    prompt: "Which is a terminal value in the fight between long-time nurses and newer nurses on this unit?",
     choices: [
       { id: "a", text: "How to precept a new nurse" },
-      { id: "b", text: "Whether to use float pool coverage" },
+      { id: "b", text: "Whether to cover a shift with a nurse borrowed from another unit" },
       { id: "c", text: "Patient care / not harming surgical patients" },
       { id: "d", text: "Who gets the holiday schedule" },
     ],
@@ -619,7 +619,7 @@ export const QUIZ: McQuestion[] = [
   {
     id: "m7",
     session: 4,
-    prompt: "Blaming 'lazy juniors' while ignoring the freeze and float pool is:",
+    prompt: "Blaming 'lazy newer nurses' while ignoring the hiring freeze and nurses borrowed from other units is:",
     choices: [
       { id: "a", text: "Self-serving bias about Barbara" },
       { id: "b", text: "Fundamental attribution error" },
@@ -627,12 +627,12 @@ export const QUIZ: McQuestion[] = [
       { id: "d", text: "Instrumentality" },
     ],
     correct: "b",
-    why: "FAE = others' behavior attributed to disposition, downplaying the situation.",
+    why: "fundamental attribution error = others' behavior attributed to disposition, downplaying the situation.",
   },
   {
     id: "m8",
     session: 5,
-    prompt: "Motivation and performance are distinct at GSU because:",
+    prompt: "Motivation and performance are distinct on the General Surgery Unit because:",
     choices: [
       { id: "a", text: "Nurses cannot possibly care about patients" },
       { id: "b", text: "People can be willing and still unable or not allowed to perform given staffing" },
@@ -650,7 +650,7 @@ export const QUIZ: McQuestion[] = [
       { id: "a", text: "Motivators cannot land while hygiene is broken" },
       { id: "b", text: "Posters are scientific evidence" },
       { id: "c", text: "Valence is always zero in nursing" },
-      { id: "d", text: "ERG forbids recognition" },
+      { id: "d", text: "Existence-Relatedness-Growth forbids recognition" },
     ],
     correct: "a",
     why: "Hygiene (conditions, supervision, relationships, policy) removes dissatisfaction. Recognition is a motivator that will bounce off a hostile, understaffed unit.",
@@ -658,7 +658,7 @@ export const QUIZ: McQuestion[] = [
   {
     id: "m10",
     session: 5,
-    prompt: "EMU hopes for teamwork and quality but the freeze + mystery reviews + no OT actually pay off 'survive your shift.' This is:",
+    prompt: "Eastern Massachusetts University Hospital hopes for teamwork and quality but the freeze + mystery reviews + no overtime actually pay off 'survive your shift.' This is:",
     choices: [
       { id: "a", text: "An expectancy problem only" },
       { id: "b", text: "Kerr's alignment problem (hope for A, reward B)" },
@@ -689,7 +689,7 @@ export const QUIZ: McQuestion[] = [
       { id: "a", text: "Equity response (exit)" },
       { id: "b", text: "Agentic shift" },
       { id: "c", text: "Programmed decision" },
-      { id: "d", text: "Increase in MPS" },
+      { id: "d", text: "Increase in Motivating Potential Score" },
     ],
     correct: "a",
     why: "People restore unequal ratios by leaving, among other reactions.",
@@ -697,7 +697,7 @@ export const QUIZ: McQuestion[] = [
   {
     id: "m13",
     session: 6,
-    prompt: "MPS = ((V+I+S)/3) × A × F. GSU has very high significance. Why can MPS still be terrible?",
+    prompt: "Motivating Potential Score = ((V+I+S)/3) × A × F. Nursing on this unit has very high significance. Why can that score still be terrible?",
     choices: [
       { id: "a", text: "Significance is not in the formula" },
       { id: "b", text: "If autonomy or feedback is near zero, the product collapses" },
@@ -705,12 +705,12 @@ export const QUIZ: McQuestion[] = [
       { id: "d", text: "Only variety matters in nursing" },
     ],
     correct: "b",
-    why: "A and F are multipliers. Raise those first, then identity.",
+    why: "Autonomy and feedback are multipliers. Raise those first, then identity.",
   },
   {
     id: "m14",
     session: 6,
-    prompt: "Using the float pool as interchangeable coverage is closest to:",
+    prompt: "Treating nurses borrowed from other units as interchangeable coverage is closest to:",
     choices: [
       { id: "a", text: "Job crafting" },
       { id: "b", text: "Scientific management" },
@@ -726,7 +726,7 @@ export const QUIZ: McQuestion[] = [
     prompt: "The heresy in 'nursing was my calling so I must have chosen wrong' is mainly:",
     choices: [
       { id: "a", text: "That work will automatically be bliss / one true calling determines fulfillment" },
-      { id: "b", text: "That MPS cannot be calculated in hospitals" },
+      { id: "b", text: "That the Motivating Potential Score cannot be calculated in hospitals" },
       { id: "c", text: "That Cialdini forbids meaning" },
       { id: "d", text: "That relatedness is an existence need" },
     ],
@@ -754,10 +754,10 @@ export const QUIZ: McQuestion[] = [
       { id: "a", text: "Expert and referent" },
       { id: "b", text: "Reward and coercive" },
       { id: "c", text: "Legitimate only, forever" },
-      { id: "d", text: "Dependence of RNs on her" },
+      { id: "d", text: "Dependence of registered nurses on her" },
     ],
     correct: "b",
-    why: "No OT, hiring freeze, hard to fire. She must build expert and referent and use Cialdini.",
+    why: "No overtime, hiring freeze, hard to fire. She must build expert and referent and use Cialdini.",
   },
   {
     id: "m18",
@@ -777,9 +777,9 @@ export const QUIZ: McQuestion[] = [
     session: 8,
     prompt: "The agentic shift predicts that blame culture persists because:",
     choices: [
-      { id: "a", text: "Everyone at GSU has low agreeableness" },
+      { id: "a", text: "Everyone on the General Surgery Unit has low agreeableness" },
       { id: "b", text: "People come to see themselves as executing the unit's authority rules, and first compliance is sticky" },
-      { id: "c", text: "MPS is too high" },
+      { id: "c", text: "Motivating Potential Score is too high" },
       { id: "d", text: "Barbara has too much reward power" },
     ],
     correct: "b",
@@ -791,8 +791,8 @@ export const QUIZ: McQuestion[] = [
     prompt: "Best 90-day stack under the freeze?",
     choices: [
       { id: "a", text: "Wait for money, then add bonuses, then redesign jobs" },
-      { id: "b", text: "Evidence-code the off-site → satisfice on a few goals → fix I/equity and MPS multipliers → influence with Cialdini" },
-      { id: "c", text: "MBTI for all staff, then fire low extraverts" },
+      { id: "b", text: "Evidence-code the off-site → satisfice on a few goals → fix I/equity and Motivating Potential Score multipliers → influence with Cialdini" },
+      { id: "c", text: "Myers-Briggs Type Indicator for all staff, then fire low extraverts" },
       { id: "d", text: "Maximize with a fully rational model of every complaint card" },
     ],
     correct: "b",
@@ -806,18 +806,18 @@ export const ESSAYS: Essay[] = [
     title: "Diagnose then act",
     minutes: 25,
     prompt:
-      "You are advising Barbara Norris at the end of her first month. Using course vocabulary, diagnose why GSU is failing and recommend a 90-day plan she can execute under the hiring freeze. Explicitly connect frameworks rather than listing them.",
+      "You are advising Barbara Norris at the end of her first month. Using course vocabulary, diagnose why the General Surgery Unit is failing and recommend a 90-day plan she can execute under the hiring freeze. Explicitly connect frameworks rather than listing them.",
     rubric: [
       { id: "levels", label: "Two+ levels of analysis", aliases: ["individual", "group", "team", "organiz", "level"] },
       { id: "evidence", label: "Evidence types, not just 'morale'", aliases: ["evidence", "turnover", "satisfaction", "off-site", "qualitative"] },
       { id: "lewin", label: "B = f(P, E) or fit", aliases: ["lewin", "fit", "person", "environment", "b = f"] },
       { id: "motivation", label: "A motivation theory with parts", aliases: ["hygiene", "expectancy", "instrumentality", "valence", "equity", "kerr", "alignment"] },
-      { id: "job", label: "JCM / MPS or crafting", aliases: ["jcm", "mps", "autonomy", "feedback", "crafting", "identity"] },
+      { id: "job", label: "Job Characteristics Model / Motivating Potential Score or crafting", aliases: ["jcm", "mps", "autonomy", "feedback", "crafting", "identity"] },
       { id: "power", label: "Power / influence without money", aliases: ["referent", "expert", "cialdini", "unity", "consistency", "influence"] },
-      { id: "fact", label: "Specific GSU facts", aliases: ["freeze", "float", "review", "favoritism", "junior", "senior", "overtime"] },
+      { id: "fact", label: "Specific fact from the cases", aliases: ["freeze", "float", "review", "favoritism", "junior", "senior", "overtime"] },
     ],
     model:
-      "Start with org evidence (lowest satisfaction, highest turnover, declining patient scores) and qualitative off-site themes (teamwork, conflict, mystery reviews, physicians as order-givers). Three-level failure: individuals exhausted, groups in blame/favoritism, organization in freeze/no-OT. Lewin: do not treat seniors as fixed types; the environment currently pays off hazing and FAE toward juniors. Decision: nonprogrammed; satisfice. 90 days: (1) hygiene/relatedness — huddles, mixed pairs, float orientation; (2) instrumentality and equity — write and share review criteria, stop favoritism in scheduling; (3) JCM multipliers — assignment autonomy, weekly specific feedback, protect task identity; (4) influence — expert presence on the floor, unity identity, public commitments, social proof from one senior. Tripwire: another RN resignation triggers a meeting with the Director armed with coded evidence.",
+      "Start with org evidence (lowest satisfaction, highest turnover, declining patient scores) and qualitative off-site themes (teamwork, conflict, mystery reviews, physicians as order-givers). Three-level failure: individuals exhausted, groups in blame/favoritism, organization in hiring freeze and no overtime. Lewin: do not treat seniors as fixed types; the environment currently pays off hazing and fundamental attribution error toward juniors. Decision: nonprogrammed; satisfice. 90 days: (1) hygiene/relatedness — huddles, mixed pairs, orientation for nurses borrowed from other units; (2) instrumentality and equity — write and share review criteria, stop favoritism in scheduling; (3) Job Characteristics Model multipliers — assignment autonomy, weekly specific feedback, protect task identity; (4) influence — expert presence on the floor, unity identity, public commitments, social proof from one senior. Tripwire: another registered-nurse resignation triggers a meeting with the Director armed with coded evidence.",
   },
   {
     id: "w2",
@@ -827,15 +827,15 @@ export const ESSAYS: Essay[] = [
       "A classmate says the nurses are 'just unmotivated.' Write a response that uses need theory, goal setting, reinforcement alignment, expectancy, and equity. Show that 'unmotivated' is an incomplete individual-level label.",
     rubric: [
       { id: "distinct", label: "Motivation ≠ performance", aliases: ["performance", "willing", "able", "distinct"] },
-      { id: "needs", label: "Herzberg or ERG with GSU facts", aliases: ["hygiene", "herzberg", "erg", "existence", "relatedness"] },
-      { id: "smart", label: "SMART vs 'turn it around fast'", aliases: ["smart", "goal", "specific", "turn the unit"] },
+      { id: "needs", label: "Herzberg or Existence-Relatedness-Growth with a fact from the case", aliases: ["hygiene", "herzberg", "erg", "existence", "relatedness"] },
+      { id: "smart", label: "Specific goals vs 'turn it around fast'", aliases: ["smart", "goal", "specific", "turn the unit"] },
       { id: "kerr", label: "Hope vs reward", aliases: ["kerr", "alignment", "hope", "reward"] },
       { id: "eiv", label: "E, I, and V named separately", aliases: ["expectancy", "instrumentality", "valence"] },
       { id: "equity", label: "Equity + turnover as response", aliases: ["equity", "favoritism", "turnover", "exit"] },
       { id: "lever", label: "What she can change without money", aliases: ["review", "huddle", "meaning", "jcm", "recognition"] },
     ],
     model:
-      "Motivation is reasons for movement, not output. Hygiene/existence is broken (staffing, freeze, hostility), so two-factor theory predicts dissatisfaction even if someone loves nursing. Relatedness is blocked, so ERG regression looks like fights over schedules. Goals are vague. Alignment: hope for collaboration; reward surviving the shift. Expectancy: cannot perform (E), performance does not pay (I), extra shifts may be unwanted (V). Equity: favorites and equal pay for unequal load → exit. They may care intensely and still look unmotivated. Barbara changes I and equity (transparent reviews), E (huddles, smarter assignments), and valence/meaning (JCM/crafting), while SMART-ing a few goals the staff can actually hit.",
+      "Motivation is reasons for movement, not output. Hygiene/existence is broken (staffing, freeze, hostility), so two-factor theory predicts dissatisfaction even if someone loves nursing. Relatedness is blocked, so Existence-Relatedness-Growth regression looks like fights over schedules. Goals are vague. Alignment: hope for collaboration; reward surviving the shift. Expectancy: cannot perform (E), performance does not pay (I), extra shifts may be unwanted (V). Equity: favorites and equal pay for unequal load → exit. They may care intensely and still look unmotivated. Barbara changes I and equity (transparent reviews), E (huddles, smarter assignments), and valence/meaning (job design and crafting), while making a few goals specific and time-bound.",
   },
   {
     id: "w3",
@@ -844,47 +844,86 @@ export const ESSAYS: Essay[] = [
     prompt:
       "Assume the freeze will not lift this year. How should Barbara build and use power, what dark-side risks does she personally face, and how do Cialdini plus the agentic shift shape her tactics?",
     rubric: [
-      { id: "crler", label: "CRLER mapped to freeze", aliases: ["coercive", "reward", "legitimate", "expert", "referent"] },
+      { id: "crler", label: "Five power bases mapped to freeze", aliases: ["coercive", "reward", "legitimate", "expert", "referent"] },
       { id: "sis", label: "Nurses' dependence power", aliases: ["scarce", "substitut", "dependence", "important"] },
       { id: "dark", label: "New-power risk for Barbara", aliases: ["overconfiden", "objectify", "low-status", "checks", "dark"] },
-      { id: "cialdini", label: "Four+ Cialdini tactics with GSU behaviors", aliases: ["liking", "reciprocity", "social proof", "consistency", "authority", "scarcity", "unity"] },
+      { id: "cialdini", label: "Four+ Cialdini tactics with behaviors on her unit", aliases: ["liking", "reciprocity", "social proof", "consistency", "authority", "scarcity", "unity"] },
       { id: "agentic", label: "Agentic shift", aliases: ["agentic", "authority", "compli", "obey"] },
       { id: "check", label: "A check on Barbara herself", aliases: ["check", "published", "criteria", "dissent", "balance"] },
     ],
     model:
-      "Reward and coercive bases are thin. Legitimate power is new and discounted. Expert and referent must be earned on the floor (she is already covering shifts — reciprocity + authority-as-expertise). Staff are scarce/important/nonsubstitutable, so they can resist. She matches the low-status person gains power risk: objectifying, overconfidence. Mitigate with published criteria and inviting dissent. Tactics: liking and unity to dissolve cliques; consistency via voluntary public commitments; social proof via one high-status mentor; scarcity of the reset; reciprocity on hard nights. Agentic shift: people obey the old GSU rules; she must make a new authority script that is safe to follow, not a pep talk.",
+      "Reward and coercive bases are thin. Legitimate power is new and discounted. Expert and referent must be earned on the floor (she is already covering shifts — reciprocity + authority-as-expertise). Staff are scarce/important/nonsubstitutable, so they can resist. She matches the low-status person gains power risk: objectifying, overconfidence. Mitigate with published criteria and inviting dissent. Tactics: liking and unity to dissolve cliques; consistency via voluntary public commitments; social proof via one high-status mentor; scarcity of the reset; reciprocity on hard nights. Agentic shift: people obey the old unit rules; she must make a new authority script that is safe to follow, not a pep talk.",
   },
 ]
 
 export const CASE_FACTS = [
   {
-    title: "The job",
-    body: "Barbara Norris is about one month into nurse manager of the General Surgery Unit at Eastern Massachusetts University Hospital. She owns staffing, scheduling, and budget. Experienced RN, new master's in nursing administration, not an experienced large-unit manager. Contrast mentor: Betty Nolan.",
+    title: "Who Barbara is",
+    body: "Barbara Norris is about one month into the nurse-manager job on the General Surgery Unit at Eastern Massachusetts University Hospital. She is in charge of staffing, scheduling, and the unit budget. She is an experienced registered nurse with a new master’s degree in nursing administration, but she has not managed a large unit before. Her old mentor, Betty Nolan, is the example of good people leadership she has in mind.",
   },
   {
-    title: "The numbers",
-    body: "Lowest employee satisfaction and highest turnover of any EMU department. Patient satisfaction average but declining. Two RNs gone in her first month; three in the six months before she arrived. Hiring freeze, so she cannot replace them. No overtime.",
+    title: "How the unit is doing",
+    body: "Among all departments at Eastern Massachusetts University Hospital, this unit has the lowest employee satisfaction and the highest turnover. Patient satisfaction is still about average, but it has been falling. Two registered nurses left in Barbara’s first month; three left in the six months before she arrived. A hospital-wide hiring freeze means she cannot replace them. Overtime pay has been stopped.",
   },
   {
-    title: "The night",
-    body: "The case opens at 10pm. She has been there since 6:30am and plans to stay to help the shift transition and orient two float-pool RNs. Tired. Overwhelmed.",
+    title: "The night the case opens",
+    body: "It is 10 p.m. Barbara has been on the unit since 6:30 a.m. and plans to stay to help the shift change and to orient two nurses borrowed from other units (the hospital “float pool”). She is tired and overwhelmed.",
   },
   {
-    title: "The freeze",
-    body: "Economic crisis: EMU enacted a hiring freeze, stopped overtime, and cut shift differentials. She cannot throw money at motivation. Float-pool nurses cover gaps and do not know GSU.",
+    title: "The hiring freeze",
+    body: "The hospital is in an economic crunch: no new hires, no overtime, smaller extra pay for nights and weekends. Barbara cannot buy motivation with money. When someone is out, she often covers with nurses borrowed from other units who do not know this unit, which stresses the regular staff.",
   },
   {
     title: "The culture",
-    body: "Infamous for confrontation, blaming, and favoritism. Staff who remain are dissatisfied, unmotivated, not functioning as a team. Juniors vs seniors (Megan Mahoney called a pest). PCAs in the mix. Physicians treating nurses as order-takers.",
+    body: "The unit is known for confrontation, blaming, and favoritism. The people who stayed are dissatisfied, unmotivated, and not working as a team. Newer nurses clash with long-time nurses — for example Megan Mahoney, who had only been there a year, said senior nurses called her a pest. Patient care assistants are part of the mix. Doctors often treat nurses as order-takers instead of caregivers.",
   },
   {
-    title: "The off-site",
-    body: "29 people asked for one-to-ones soon after she started. She ran an off-site: anonymous cards for 2–3 frustrations. Themes: no collaboration, interpersonal/intergroup conflict, doctors, administration caring about money over care, favoritism, staffing, mystery performance reviews. It ran long and turned into a vent.",
+    title: "The off-site meeting",
+    body: "Soon after Barbara started, 29 staff asked for private one-on-one meetings. She also ran a workshop away from the unit. People wrote, anonymously, two or three things that frustrated them most. Themes: no teamwork, fights between people and groups, doctors, leaders caring more about money than patients, favoritism, not enough staff, and performance reviews that feel like a mystery. The meeting ran long and turned into a vent session.",
+  },
+]
+
+export const CASE_GLOSSARY = [
+  {
+    term: "General Surgery Unit",
+    body: "Barbara’s floor. The case packet often shortens this to GSU. It is a large inpatient unit for patients recovering from surgery.",
+  },
+  {
+    term: "Eastern Massachusetts University Hospital",
+    body: "The hospital. The case packet often shortens this to EMU.",
+  },
+  {
+    term: "Registered nurse",
+    body: "A licensed nurse (the case says RN). Barbara used to be one of them; now she manages them.",
+  },
+  {
+    term: "Patient care assistant",
+    body: "A support caregiver on the unit (the case says PCA). Not a registered nurse, but part of the team and the conflict.",
+  },
+  {
+    term: "Float pool",
+    body: "Nurses who work wherever the hospital is short that day. They do not usually work on this unit, so they need extra orientation and the regular staff often has to teach them on the fly.",
+  },
+  {
+    term: "Hiring freeze / no overtime",
+    body: "The hospital will not fill empty jobs or pay extra for overtime. That is why “just hire more people” or “pay them more” is not a legal exam answer unless you also say she would have to get an exception from her boss.",
+  },
+  {
+    term: "Off-site",
+    body: "A meeting Barbara held away from the unit so staff could talk. They wrote anonymous complaint cards.",
+  },
+  {
+    term: "Megan Mahoney",
+    body: "A newer nurse (about one year on the unit) who said senior nurses would not teach her directly and called her a pest.",
+  },
+  {
+    term: "Betty Nolan",
+    body: "Barbara’s former mentor — an example of a manager who was good with people and ran real performance reviews.",
   },
 ]
 
 export const EXAM_BEAT =
-  "Name the concept → define it in one sentence → cite a concrete GSU fact → say what Barbara should do."
+  "Name the concept → define it in one sentence → cite a concrete fact from Barbara’s unit → say what she should do."
 
 export const STACK_LINE =
   "People (who they are) in situations (levels + freeze) perceive and choose imperfectly; diagnose that with evidence; move them with needs, goals, rewards, expectancy, and fairness; then with the job and how they narrate it; then use power and influence — or the old authority system will keep producing agentic compliance with blame."

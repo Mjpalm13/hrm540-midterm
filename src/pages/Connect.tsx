@@ -25,7 +25,7 @@ export function Connect({ go }: { go: (r: Route, session?: number) => void }) {
             className="pipe-step"
             onClick={() => go('learn', step.id)}
           >
-            <span className="pipe-n">S{step.id}</span>
+            <span className="pipe-n">Session {step.id}</span>
             <span>
               <strong>{step.ask}</strong>
               <span className="kb" style={{ display: 'block' }}>
@@ -49,34 +49,34 @@ export function Connect({ go }: { go: (r: Route, session?: number) => void }) {
           </thead>
           <tbody>
             <tr>
-              <td>Why GSU is a mess</td>
-              <td>S1 levels + S2 SOES</td>
-              <td>S3 fit, S4 FAE/stereotypes</td>
+              <td>Why the surgery unit is struggling</td>
+              <td>Session 1 levels + Session 2 evidence types</td>
+              <td>Session 3 fit, Session 4 stereotypes and fundamental attribution error</td>
             </tr>
             <tr>
               <td>“They’re unmotivated”</td>
-              <td>S5 motivation ≠ performance</td>
-              <td>Herzberg, Kerr, E×I×V, equity</td>
+              <td>Session 5: motivation is not the same as performance</td>
+              <td>Herzberg, Kerr, expectancy × instrumentality × valence, equity</td>
             </tr>
             <tr>
               <td>No money / freeze</td>
-              <td>S6 MPS multipliers</td>
-              <td>S7 crafting + S8 Cialdini</td>
+              <td>Session 6 Motivating Potential Score multipliers</td>
+              <td>Session 7 job crafting + Session 8 influence</td>
             </tr>
             <tr>
-              <td>Juniors vs seniors</td>
-              <td>S4 stereotype / SFP / FAE</td>
-              <td>S5 equity, S7 relationship crafting</td>
+              <td>Newer nurses versus long-time nurses</td>
+              <td>Session 4 stereotype / self-fulfilling prophecy / fundamental attribution error</td>
+              <td>Session 5 equity, Session 7 relationship crafting</td>
             </tr>
             <tr>
               <td>What should Barbara do first</td>
-              <td>S4 satisfice + 3×3×3</td>
-              <td>S5 hygiene/I, S6 A and F, S8 influence</td>
+              <td>Session 4: satisfice + 3 futures × 3 objectives × 3 options</td>
+              <td>Session 5 hygiene and instrumentality, Session 6 autonomy and feedback, Session 8 influence</td>
             </tr>
             <tr>
               <td>Culture / blame</td>
-              <td>S1 group + S8 agentic shift</td>
-              <td>S4 prophecy, S5 alignment</td>
+              <td>Session 1 group + Session 8 agentic shift</td>
+              <td>Session 4 prophecy, Session 5 alignment</td>
             </tr>
           </tbody>
         </table>
@@ -88,7 +88,7 @@ export function Connect({ go }: { go: (r: Route, session?: number) => void }) {
           const next = SESSIONS[i + 1]
           return (
             <div key={s.id} className="card" style={{ padding: 16 }}>
-              <div className="kicker">S{s.id} → {next ? `S${next.id}` : 'exam plan'}</div>
+              <div className="kicker">Session {s.id} → {next ? `Session ${next.id}` : 'exam plan'}</div>
               <p style={{ margin: 0 }}>{s.toNext}</p>
             </div>
           )

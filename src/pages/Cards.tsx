@@ -94,8 +94,7 @@ export function Cards({
       <div className="kicker">Flashcards · space to flip · 1 miss · 2 partial · 3 knew</div>
       <h1>Say it, then flip.</h1>
       <p className="lede">
-        Front is the term. Back is definition, how to remember it, and the GSU hook you
-        actually need on a written exam.
+        Front is the term. Back is definition, how to remember it, and how it shows up in the case.
       </p>
       <div className="row" style={{ margin: '12px 0 18px' }}>
         <button className={`chip ${session === 0 ? 'active' : ''}`} type="button" onClick={() => onFilter(0)}>
@@ -168,7 +167,7 @@ export function Cards({
                     <strong>Remember.</strong> {card.remember}
                   </p>
                   <p>
-                    <strong>GSU.</strong> {card.caseHook}
+                    <strong>In the case.</strong> {card.caseHook}
                   </p>
                 </div>
               )}

@@ -98,7 +98,7 @@ export function Write() {
           style={{ minHeight: 320 }}
           value={draft}
           onChange={(e) => save(e.target.value)}
-          placeholder="Stack frameworks. Cite freeze, off-site, juniors/seniors, reviews, float pool. Four-beat every concept."
+          placeholder="Stack frameworks. Cite the hiring freeze, the off-site, long-time versus newer nurses, mystery reviews, and nurses borrowed from other units. Name → define → a fact from the case → so what."
         />
         <div className="row" style={{ marginTop: 12 }}>
           <button className="btn brick" type="button" onClick={check}>

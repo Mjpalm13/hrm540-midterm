@@ -10,7 +10,7 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
   return (
     <div>
       <div className="kicker">Midterm 1 Prep · HRM 540</div>
-      <h1>Learn it, connect it, drill it, then write it onto GSU.</h1>
+      <h1>Learn it, connect it, drill it, then write it onto the case.</h1>
       <p className="lede">
         The midterm is fully written: 12 questions on the Barbara Norris case. Some items
         use one framework; some combine two or more. Learn each session, see how they
@@ -27,8 +27,8 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
           <div className="num">Learn by session</div>
           <h2>Infographics + resources</h2>
           <p>
-            All {SESSIONS.length} sessions: diagram, parts to name, memorize tips, worked GSU
-            example, and the usual exam miss.
+            All {SESSIONS.length} sessions: diagram, parts to name, memorize tips, a worked
+            example from Barbara’s unit, and the usual exam miss.
           </p>
         </a>
         <a className="door" href="#/connect" onClick={(e) => { e.preventDefault(); go('connect') }}>
@@ -47,7 +47,7 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
           <div className="num">{FLASHCARDS.length} cards</div>
           <h2>Flashcards</h2>
           <p>
-            Term on the front. Definition, memory hook, and GSU hook on the back. Rate missed
+            Term on the front. Definition, memory hook, and how it shows up in the case on the back. Rate missed
             / partial / knew. Filter by session.
           </p>
         </a>
@@ -55,8 +55,9 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
           <div className="num">Cite, don’t vibe</div>
           <h2>Case facts</h2>
           <p>
-            Freeze, float pool, 29 one-to-ones, off-site cards, mystery reviews, seniors vs
-            juniors. Stock these for every written answer.
+            Hiring freeze, nurses borrowed from other units, 29 one-on-one requests, off-site
+            complaint cards, mystery reviews, long-time nurses versus newer nurses. Stock
+            these for every written answer.
           </p>
         </a>
       </div>
@@ -84,7 +85,7 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
       <a className="door" href="#/quiz" onClick={(e) => { e.preventDefault(); go('quiz') }}>
         <div className="num">Multiple choice</div>
         <h2>Trap quiz</h2>
-        <p>Distractors that look like midterm mistakes: wrong level, E vs I vs V, MPS zeros, intuition misuse.</p>
+        <p>Distractors that look like midterm mistakes: wrong level of analysis, expectancy vs instrumentality vs valence, Motivating Potential Score zeros, misusing intuition.</p>
       </a>
 
       <div className="callout ink" style={{ marginTop: 22 }}>

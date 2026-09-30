@@ -18,7 +18,7 @@ export function Sessions() {
             type="button"
             onClick={() => setId(item.id)}
           >
-            S{item.id} {item.title.split(' ')[0]}
+            Session {item.id}
           </button>
         ))}
       </div>
@@ -33,7 +33,7 @@ export function Sessions() {
           <div className="kicker">Way to remember</div>
           <h2 style={{ fontSize: '1.25rem' }}>{s.remember}</h2>
           <p>
-            <strong>GSU. </strong>
+            <strong>In the case. </strong>
             {s.barbara}
           </p>
         </div>
@@ -54,9 +54,9 @@ function Infographic({ id }: { id: number }) {
   if (id === 1) {
     return (
       <div className="levels-org">
-        <strong>Organization</strong> — freeze, reviews, EMU culture, GSU reputation
+        <strong>Organization</strong> — hiring freeze · reviews · hospital culture · this unit’s reputation
         <div className="levels-group">
-          <strong>Group</strong> — cliques, seniors / juniors / PCAs, blame norms
+          <strong>Group</strong> — cliques · long-time nurses / newer nurses / patient care assistants · blame
           <div className="levels-ind">
             <strong>Individual</strong> — values, personality, exhaustion, self-efficacy
           </div>
@@ -67,10 +67,10 @@ function Infographic({ id }: { id: number }) {
 
   if (id === 2) {
     const cells = [
-      ['Scientific', 'Research on turnover, equity, JCM'],
-      ['Organizational', 'Scores, vacancies, 29 one-to-ones'],
-      ['Experiential', 'RN years + Betty Nolan'],
-      ['Stakeholder', 'Nurses, PCAs, MDs, patients, DoN'],
+      ['Scientific', 'Research on turnover, equity, job design'],
+      ['Organizational', 'Scores, vacancies, 29 one-on-one requests'],
+      ['Experiential', 'Years as a registered nurse + Betty Nolan'],
+      ['Stakeholder', 'Nurses, patient care assistants, doctors, patients, Director of Nursing'],
     ]
     return (
       <div className="grid two">
@@ -89,7 +89,7 @@ function Infographic({ id }: { id: number }) {
       <div className="grid three">
         <div className="card" style={{ padding: 16 }}>
           <h3>Person (P)</h3>
-          <p>values, OCEAN, efficacy</p>
+          <p>values, Big Five personality, self-efficacy</p>
         </div>
         <div className="card" style={{ padding: 16 }}>
           <h3>Environment (E)</h3>
@@ -106,7 +106,7 @@ function Infographic({ id }: { id: number }) {
   if (id === 4) {
     const stages = [
       ['Perceive', 'stereotypes, self-enhancement'],
-      ['Attribute', 'FAE, availability, framing'],
+      ['Attribute', 'fundamental attribution error, availability, framing'],
       ['Decide', 'intuit / maximize / satisfice'],
       ['Evaluate', 'confirm, hindsight, escalate'],
     ]
@@ -123,7 +123,7 @@ function Infographic({ id }: { id: number }) {
   }
 
   if (id === 5) {
-    const row = ['Needs', 'Goals', 'Rewards', 'E × I × V', 'Equity']
+    const row = ['Needs', 'Specific goals', 'Rewards', 'Expectancy × instrumentality × valence', 'Equity']
     return (
       <div className="grid" style={{ gridTemplateColumns: 'repeat(5, minmax(0, 1fr))' }}>
         {row.map((t) => (
@@ -139,7 +139,7 @@ function Infographic({ id }: { id: number }) {
     return (
       <div className="grid three">
         <div className="card" style={{ padding: 16 }}>
-          <h3>VISAF</h3>
+          <h3>Five job characteristics</h3>
           <p>Variety, Identity, Significance, Autonomy, Feedback</p>
         </div>
         <div className="card" style={{ padding: 16 }}>
@@ -147,8 +147,8 @@ function Infographic({ id }: { id: number }) {
           <p>Meaningfulness, responsibility, knowledge of results</p>
         </div>
         <div className="card" style={{ padding: 16 }}>
-          <h3>MPS</h3>
-          <p>((V+I+S)/3) × A × F — zeros on A or F kill it</p>
+          <h3>Motivating Potential Score</h3>
+          <p>((V+I+S)/3) × A × F — zeros on autonomy or feedback kill it</p>
         </div>
       </div>
     )
@@ -159,7 +159,7 @@ function Infographic({ id }: { id: number }) {
       <div className="grid two">
         <div className="card" style={{ padding: 16 }}>
           <h3>Passion story (heresies)</h3>
-          <p>Follow passion → find calling → bliss. Fails at GSU: calling met misery.</p>
+          <p>Follow passion → find calling → bliss. Fails here: people entered a calling job and met misery.</p>
         </div>
         <div className="card" style={{ padding: 16, borderColor: 'var(--brick)' }}>
           <h3>Crafting path</h3>
@@ -178,7 +178,7 @@ function Infographic({ id }: { id: number }) {
           </span>
         ))}
       </div>
-      <p className="kb">Dependence: scarcity × importance × substitutability — GSU RNs hold this too.</p>
+      <p className="kb">Dependence: scarcity × importance × substitutability — registered nurses on this unit hold this too.</p>
       <div className="row">
         {['Liking', 'Reciprocity', 'Social proof', 'Consistency', 'Authority', 'Scarcity', 'Unity'].map(
           (t) => (

@@ -57,7 +57,7 @@ export function Exam() {
       <div className="kicker">Practice exam · 12 written questions · some combine frameworks</div>
       <h1>Sit it like the midterm.</h1>
       <p className="lede">
-        Twelve questions, all written, all GSU. Single-framework items still want a
+        Twelve written questions, all about Barbara’s surgery unit. Single-framework items still want a
         four-beat answer. Combo items want the frameworks named and connected, not
         listed. Type first, then open a strong model.
       </p>
@@ -95,7 +95,7 @@ export function Exam() {
           style={{ minHeight: 280 }}
           value={draft}
           onChange={(e) => save(e.target.value)}
-          placeholder="Name → define → GSU fact → so what. If it is a combo, show how the frameworks build."
+          placeholder="Name → define → a fact from the case → so what. If it is a combo, show how the frameworks build."
         />
         <div className="row" style={{ marginTop: 12 }}>
           <button className="btn brick" type="button" onClick={check}>

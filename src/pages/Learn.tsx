@@ -15,7 +15,7 @@ export function Learn({
 
   return (
     <div>
-      <div className="kicker">Learn by session · infographic, memorize, GSU example</div>
+      <div className="kicker">Learn by session · infographic, memorize, example from the case</div>
       <h1>
         Session {s.id}: {s.title}
       </h1>
@@ -31,7 +31,7 @@ export function Learn({
             type="button"
             onClick={() => go('learn', item.id)}
           >
-            S{item.id}
+            Session {item.id}
           </button>
         ))}
       </div>
@@ -81,11 +81,11 @@ export function Learn({
         ))}
       </div>
 
-      <h2 className="section-title">Worked onto Barbara / GSU</h2>
+      <h2 className="section-title">Worked onto Barbara’s unit</h2>
       <div className="card" style={{ padding: 18 }}>
         <p>{s.worked}</p>
         <p>
-          <strong>GSU hook.</strong> {s.barbara}
+          <strong>In the case.</strong> {s.barbara}
         </p>
         <div className="callout" style={{ margin: 0 }}>
           <strong>Usual exam miss.</strong> {s.examMiss}
@@ -94,10 +94,10 @@ export function Learn({
 
       <div className="row" style={{ marginTop: 18 }}>
         <button className="btn brick" type="button" onClick={() => go('cards', s.id)}>
-          Flashcards for S{s.id} ({cardCount})
+          Flashcards for Session {s.id} ({cardCount})
         </button>
         <button className="btn" type="button" onClick={() => go('apply', s.id)}>
-          Type a GSU question ({qCount})
+          Type a case question ({qCount})
         </button>
         <button className="btn ghost" type="button" onClick={() => go('connect')}>
           See the full stack
@@ -113,10 +113,10 @@ function Infographic({ id }: { id: number }) {
       <div className="viz">
         <div className="levels-org">
           <strong>Organization</strong>
-          <span>freeze · reviews · EMU culture · GSU reputation</span>
+          <span>hiring freeze · reviews · hospital culture · this unit’s reputation</span>
           <div className="levels-group">
             <strong>Group</strong>
-            <span>cliques · seniors / juniors / PCAs · blame norms</span>
+            <span>cliques · long-time nurses / newer nurses / patient care assistants · blame</span>
             <div className="levels-ind">
               <strong>Individual</strong>
               <span>values · personality · exhaustion · self-efficacy</span>
@@ -129,10 +129,10 @@ function Infographic({ id }: { id: number }) {
 
   if (id === 2) {
     const cells = [
-      ['Scientific', 'Research on turnover, equity, JCM'],
-      ['Organizational', 'Scores, vacancies, 29 one-to-ones'],
-      ['Experiential', 'RN years + Betty Nolan'],
-      ['Stakeholder', 'Nurses, PCAs, MDs, patients, DoN'],
+      ['Scientific', 'Research on turnover, equity, job design'],
+      ['Organizational', 'Scores, vacancies, 29 one-on-one requests'],
+      ['Experiential', 'Years as a registered nurse + Betty Nolan'],
+      ['Stakeholder', 'Nurses, patient care assistants, doctors, patients, Director of Nursing'],
     ]
     return (
       <div className="viz">
@@ -153,7 +153,7 @@ function Infographic({ id }: { id: number }) {
       <div className="viz flow">
         <div className="card" style={{ padding: 16 }}>
           <h3>Person (P)</h3>
-          <p>values, OCEAN, efficacy</p>
+          <p>values, Big Five personality, self-efficacy</p>
         </div>
         <span className="flow-plus">+</span>
         <div className="card" style={{ padding: 16 }}>
@@ -172,7 +172,7 @@ function Infographic({ id }: { id: number }) {
   if (id === 4) {
     const stages = [
       ['1 Perceive', 'stereotypes, self-enhancement'],
-      ['2 Attribute', 'FAE, availability, framing'],
+      ['2 Attribute', 'fundamental attribution error, availability, framing'],
       ['3 Decide', 'intuit / maximize / satisfice'],
       ['4 Evaluate', 'confirm, hindsight, escalate'],
     ]
@@ -192,7 +192,7 @@ function Infographic({ id }: { id: number }) {
   }
 
   if (id === 5) {
-    const row = ['Needs', 'SMART goals', 'Hope vs reward', 'E × I × V', 'Equity']
+    const row = ['Needs', 'Specific goals', 'Hope vs reward', 'Expectancy × instrumentality × valence', 'Equity']
     return (
       <div className="viz flow wrap">
         {row.map((t, i) => (
@@ -211,7 +211,7 @@ function Infographic({ id }: { id: number }) {
     return (
       <div className="viz flow">
         <div className="card" style={{ padding: 16 }}>
-          <h3>VISAF</h3>
+          <h3>Five job characteristics</h3>
           <p>Variety · Identity · Significance · Autonomy · Feedback</p>
         </div>
         <span className="flow-plus">→</span>
@@ -221,7 +221,7 @@ function Infographic({ id }: { id: number }) {
         </div>
         <span className="flow-plus">→</span>
         <div className="card" style={{ padding: 16, borderColor: 'var(--brick)' }}>
-          <h3>MPS</h3>
+          <h3>Motivating Potential Score</h3>
           <p>((V+I+S)/3) × A × F</p>
         </div>
       </div>
@@ -233,7 +233,7 @@ function Infographic({ id }: { id: number }) {
       <div className="grid two viz">
         <div className="card" style={{ padding: 16 }}>
           <h3>Passion story (heresies)</h3>
-          <p>Follow passion → find calling → bliss. Fails at GSU: calling met misery.</p>
+          <p>Follow passion → find calling → bliss. Fails here: people entered a calling job and met misery.</p>
         </div>
         <div className="card" style={{ padding: 16, borderColor: 'var(--brick)' }}>
           <h3>Crafting path</h3>
@@ -252,7 +252,7 @@ function Infographic({ id }: { id: number }) {
           </span>
         ))}
       </div>
-      <p className="kb">Dependence: scarcity × importance × substitutability — GSU RNs hold this too.</p>
+      <p className="kb">Dependence: scarcity × importance × substitutability — registered nurses on this unit hold this too.</p>
       <div className="row">
         {['Liking', 'Reciprocity', 'Social proof', 'Consistency', 'Authority', 'Scarcity', 'Unity'].map(
           (t) => (
