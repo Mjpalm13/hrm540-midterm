@@ -26,7 +26,7 @@ export function GradeSheet({ title, you, model, graded, onClose, onNext, nextLab
       >
         <div className="sheet-head">
           <div>
-            <div className="kicker">What a strong answer includes</div>
+            <div className="kicker">Most likely a strong exam answer</div>
             <h2 id="grade-title">{title}</h2>
             <p className="kb">
               {scoreLabel(hit, total)} · {hit}/{total} course ideas detected in what you typed
@@ -56,7 +56,7 @@ export function GradeSheet({ title, you, model, graded, onClose, onNext, nextLab
               <p style={{ whiteSpace: 'pre-wrap' }}>{empty ? '—' : you}</p>
             </div>
             <div className="pane model">
-              <h3>What you should probably have put</h3>
+              <h3>A strong answer would most likely include</h3>
               <p style={{ whiteSpace: 'pre-wrap' }}>{model}</p>
             </div>
           </div>

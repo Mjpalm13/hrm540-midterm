@@ -2,26 +2,29 @@ import { useEffect, useState } from 'react'
 import { Apply } from './pages/Apply'
 import { Cards } from './pages/Cards'
 import { Case } from './pages/Case'
+import { Connect } from './pages/Connect'
 import { Home } from './pages/Home'
+import { Learn } from './pages/Learn'
 import { Quiz } from './pages/Quiz'
-import { Sessions } from './pages/Sessions'
 import { Write } from './pages/Write'
-import { NAV, hashFor, routeFromHash, type Route } from './routes'
+import { NAV, hashFor, parseHash, type Route } from './routes'
 
 export default function App() {
-  const [route, setRoute] = useState<Route>(() => routeFromHash(window.location.hash))
+  const [loc, setLoc] = useState(() => parseHash(window.location.hash))
 
   useEffect(() => {
-    const onHash = () => setRoute(routeFromHash(window.location.hash))
+    const onHash = () => setLoc(parseHash(window.location.hash))
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
-  function go(next: Route) {
-    window.location.hash = hashFor(next)
-    setRoute(next)
+  function go(next: Route, session = 0) {
+    window.location.hash = hashFor(next, session)
+    setLoc(parseHash(hashFor(next, session)))
     window.scrollTo(0, 0)
   }
+
+  const { route, session } = loc
 
   return (
     <div className="shell">
@@ -46,7 +49,7 @@ export default function App() {
               className={route === item.id ? 'active' : ''}
               onClick={(e) => {
                 e.preventDefault()
-                go(item.id)
+                go(item.id, item.id === 'learn' ? session || 1 : 0)
               }}
             >
               {item.label}
@@ -55,15 +58,21 @@ export default function App() {
         </nav>
       </header>
       {route === 'home' && <Home go={go} />}
-      {route === 'cards' && <Cards />}
-      {route === 'apply' && <Apply />}
+      {route === 'learn' && <Learn session={session || 1} go={go} />}
+      {route === 'connect' && <Connect go={go} />}
+      {route === 'cards' && (
+        <Cards session={session} onFilter={(s) => go('cards', s)} />
+      )}
+      {route === 'apply' && (
+        <Apply key={session} session={session} go={go} />
+      )}
       {route === 'quiz' && <Quiz />}
       {route === 'write' && <Write />}
-      {route === 'sessions' && <Sessions />}
       {route === 'case' && <Case />}
       <p className="footer-note">
-        Built for a written exam: connect course language to Barbara Norris / GSU. Progress
-        saves in this browser. Frameworks follow HRM/BUSM 540 Sessions 1–8.
+        Sections: Learn (by session) · Connect (how they stack) · Cards · Case questions
+        (type, then a strong-answer popup) · Quiz · Essays · Facts. Progress saves in this
+        browser.
       </p>
     </div>
   )

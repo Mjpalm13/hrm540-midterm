@@ -1,26 +1,45 @@
-export type Route = 'home' | 'cards' | 'apply' | 'quiz' | 'write' | 'sessions' | 'case'
+export type Route =
+  | 'home'
+  | 'learn'
+  | 'connect'
+  | 'cards'
+  | 'apply'
+  | 'quiz'
+  | 'write'
+  | 'case'
 
 export const NAV: { id: Route; label: string; path: string }[] = [
   { id: 'home', label: 'Home', path: '#/' },
+  { id: 'learn', label: 'Learn', path: '#/learn' },
+  { id: 'connect', label: 'Connect', path: '#/connect' },
   { id: 'cards', label: 'Cards', path: '#/cards' },
-  { id: 'apply', label: 'Type', path: '#/apply' },
+  { id: 'apply', label: 'Case Qs', path: '#/apply' },
   { id: 'quiz', label: 'Quiz', path: '#/quiz' },
   { id: 'write', label: 'Essays', path: '#/write' },
-  { id: 'sessions', label: 'Sessions', path: '#/sessions' },
-  { id: 'case', label: 'Case', path: '#/case' },
+  { id: 'case', label: 'Facts', path: '#/case' },
 ]
 
-export function routeFromHash(hash: string): Route {
-  const h = hash.replace(/^#/, '').replace(/^\//, '')
-  if (h === 'cards') return 'cards'
-  if (h === 'apply') return 'apply'
-  if (h === 'quiz') return 'quiz'
-  if (h === 'write') return 'write'
-  if (h === 'sessions') return 'sessions'
-  if (h === 'case') return 'case'
-  return 'home'
+export function parseHash(hash: string): { route: Route; session: number } {
+  const stripped = hash.replace(/^#/, '')
+  const [pathPart, query] = stripped.split('?')
+  const path = (pathPart || '/').replace(/^\//, '')
+  const params = new URLSearchParams(query || '')
+  const sRaw = params.get('s')
+  const parsed = sRaw ? Number(sRaw) : 0
+  const session = Number.isFinite(parsed) ? parsed : 0
+
+  if (path === 'learn' || path === 'sessions') return { route: 'learn', session: session || 1 }
+  if (path === 'connect') return { route: 'connect', session }
+  if (path === 'cards') return { route: 'cards', session }
+  if (path === 'apply') return { route: 'apply', session }
+  if (path === 'quiz') return { route: 'quiz', session }
+  if (path === 'write') return { route: 'write', session }
+  if (path === 'case') return { route: 'case', session }
+  return { route: 'home', session }
 }
 
-export function hashFor(route: Route): string {
-  return route === 'home' ? '#/' : `#/${route}`
+export function hashFor(route: Route, session = 0): string {
+  const base = route === 'home' ? '#/' : `#/${route}`
+  if (!session) return base
+  return `${base}?s=${session}`
 }

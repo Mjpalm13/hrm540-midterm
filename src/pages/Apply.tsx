@@ -1,29 +1,40 @@
-import { useMemo, useState } from 'react'
-import { GradeSheet } from '../components/GradeSheet'
 import { APPLY, SESSIONS } from '../data'
+import { GradeSheet } from '../components/GradeSheet'
 import { gradeText } from '../grade'
+import type { Route } from '../routes'
 import { loadProgress, patchProgress } from '../storage'
+import { useMemo, useState } from 'react'
 
-export function Apply() {
-  const [session, setSession] = useState(0)
-  const [idx, setIdx] = useState(0)
-  const [open, setOpen] = useState(false)
-  const [, setTick] = useState(0)
-
+export function Apply({
+  session,
+  go,
+}: {
+  session: number
+  go: (r: Route, s?: number) => void
+}) {
   const list = useMemo(
     () => APPLY.filter((q) => (session === 0 ? true : q.session === session)),
     [session],
   )
-  const q = list[Math.min(idx, Math.max(list.length - 1, 0))]
-  const saved = q ? loadProgress().apply[q.id]?.draft ?? '' : ''
-  const [draft, setDraft] = useState(saved)
+  const [idx, setIdx] = useState(0)
+  const [open, setOpen] = useState(false)
 
-  function select(n: number, nextSession = session) {
+  const q = list[Math.min(idx, Math.max(list.length - 1, 0))]
+  const [draft, setDraft] = useState(() =>
+    q ? loadProgress().apply[q.id]?.draft ?? '' : '',
+  )
+
+  function loadIndex(n: number, nextSession = session) {
     const nextList = APPLY.filter((item) => (nextSession === 0 ? true : item.session === nextSession))
-    const next = nextList[Math.min(n, nextList.length - 1)]
+    const next = nextList[Math.min(n, Math.max(nextList.length - 1, 0))]
     setIdx(n)
     setOpen(false)
     setDraft(next ? loadProgress().apply[next.id]?.draft ?? '' : '')
+  }
+
+  function changeFilter(nextSession: number) {
+    go('apply', nextSession)
+    loadIndex(0, nextSession)
   }
 
   function save(text: string) {
@@ -45,34 +56,45 @@ export function Apply() {
   function check() {
     if (!q) return
     const graded = gradeText(draft, q.concepts)
-    const hit = graded.filter((g) => g.hit).length
     patchProgress((p) => ({
       ...p,
       apply: {
         ...p.apply,
-        [q.id]: { draft, lastHits: hit, lastTotal: graded.length },
+        [q.id]: {
+          draft,
+          lastHits: graded.filter((g) => g.hit).length,
+          lastTotal: graded.length,
+        },
       },
     }))
-    setTick((t) => t + 1)
     setOpen(true)
   }
 
   if (!q) {
-    return <div className="callout">No questions in this session filter.</div>
+    return (
+      <div>
+        <p>No case questions tagged to this session yet.</p>
+        <button className="btn" type="button" onClick={() => changeFilter(0)}>
+          Show all questions
+        </button>
+      </div>
+    )
   }
 
   const graded = gradeText(draft, q.concepts)
+  const last = loadProgress().apply[q.id]
 
   return (
     <div>
-      <div className="kicker">Typed case questions · write first, then open the popup</div>
-      <h1>Connect the vocab to GSU.</h1>
+      <div className="kicker">Barbara Norris × course concepts</div>
+      <h1>Type your answer, then see a strong one.</h1>
       <p className="lede">
-        Cover the model until you have tried. The popup compares what you wrote with what
-        you should probably have put, and flags course ideas it did not find in your text.
+        Write as you would on the midterm. When you check, a popup puts your words beside
+        what would most likely be a strong answer — plus course ideas it did not find in
+        your text.
       </p>
       <div className="row" style={{ margin: '12px 0 16px' }}>
-        <button className={`chip ${session === 0 ? 'active' : ''}`} type="button" onClick={() => { setSession(0); select(0, 0) }}>
+        <button className={`chip ${session === 0 ? 'active' : ''}`} type="button" onClick={() => changeFilter(0)}>
           All
         </button>
         {SESSIONS.map((s) => (
@@ -80,53 +102,59 @@ export function Apply() {
             key={s.id}
             className={`chip ${session === s.id ? 'active' : ''}`}
             type="button"
-            onClick={() => { setSession(s.id); select(0, s.id) }}
+            onClick={() => changeFilter(s.id)}
           >
             S{s.id}
           </button>
         ))}
       </div>
-      <p className="kb">
-        {Math.min(idx, list.length - 1) + 1} / {list.length}
-        {q.session === 0 ? ' · Synthesis' : ` · Session ${q.session}`}
-      </p>
-      <div className="card" style={{ padding: 20, marginBottom: 14 }}>
-        <h2 style={{ fontSize: '1.25rem' }}>{q.prompt}</h2>
-        <p className="kb">If you freeze: {q.stems}</p>
-        <textarea
-          className="exam"
-          value={draft}
-          onChange={(e) => save(e.target.value)}
-          placeholder="Name it → define it → GSU fact → so what."
-        />
-        <div className="row" style={{ marginTop: 12 }}>
-          <button className="btn brick" type="button" onClick={check}>
-            Check what I should have put
-          </button>
-          <button
-            className="btn"
-            type="button"
-            onClick={() => select(idx <= 0 ? list.length - 1 : idx - 1)}
-          >
-            Previous
-          </button>
-          <button
-            className="btn"
-            type="button"
-            onClick={() => select(idx >= list.length - 1 ? 0 : idx + 1)}
-          >
-            Next
-          </button>
+
+      <div className="apply-layout">
+        <aside className="q-list">
+          {list.map((item, i) => (
+            <button
+              key={item.id}
+              type="button"
+              className={`q-item ${i === Math.min(idx, list.length - 1) ? 'active' : ''}`}
+              onClick={() => loadIndex(i)}
+            >
+              <span className="kb">{item.session === 0 ? 'Synth' : `S${item.session}`}</span>
+              {item.prompt.slice(0, 72)}
+              {item.prompt.length > 72 ? '…' : ''}
+            </button>
+          ))}
+        </aside>
+        <div className="card" style={{ padding: 20 }}>
+          <p className="kb">
+            {Math.min(idx, list.length - 1) + 1} / {list.length}
+            {last?.lastTotal ? ` · last check ${last.lastHits}/${last.lastTotal} ideas` : ''}
+          </p>
+          <h2 style={{ fontSize: '1.25rem' }}>{q.prompt}</h2>
+          <p className="kb">If you freeze: {q.stems}</p>
+          <textarea
+            className="exam"
+            value={draft}
+            onChange={(e) => save(e.target.value)}
+            placeholder="Name it → define it → GSU fact → so what."
+          />
+          <div className="row" style={{ marginTop: 12 }}>
+            <button className="btn brick" type="button" onClick={check}>
+              See a strong answer
+            </button>
+            <button className="btn" type="button" onClick={() => go('learn', q.session || 1)}>
+              Review this session
+            </button>
+          </div>
         </div>
       </div>
       {open && (
         <GradeSheet
-          title={q.session === 0 ? 'Synthesis' : `Session ${q.session}`}
+          title={q.session === 0 ? 'Synthesis' : `Session ${q.session} on GSU`}
           you={draft}
           model={q.model}
           graded={graded}
           onClose={() => setOpen(false)}
-          onNext={() => select(idx >= list.length - 1 ? 0 : idx + 1)}
+          onNext={() => loadIndex(idx >= list.length - 1 ? 0 : idx + 1)}
         />
       )}
     </div>

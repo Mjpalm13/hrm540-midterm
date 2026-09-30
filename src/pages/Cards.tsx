@@ -11,8 +11,13 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-export function Cards() {
-  const [session, setSession] = useState(0)
+export function Cards({
+  session,
+  onFilter,
+}: {
+  session: number
+  onFilter: (s: number) => void
+}) {
   const [weakOnly, setWeakOnly] = useState(false)
   const [order, setOrder] = useState<string[]>(() => FLASHCARDS.map((c) => c.id))
   const [i, setI] = useState(0)
@@ -37,14 +42,19 @@ export function Cards() {
   const rating = card ? loadProgress().cards[card.id]?.rating : undefined
 
   useEffect(() => {
+    setI(0)
+    setFlipped(false)
+  }, [session, weakOnly, order])
+
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLTextAreaElement || e.target instanceof HTMLInputElement) return
       if (e.key === ' ' || e.key === 'Enter') {
         e.preventDefault()
         setFlipped((f) => !f)
       }
-      if (e.key === 'ArrowRight') next()
-      if (e.key === 'ArrowLeft') prev()
+      if (e.key === 'ArrowRight') jump(i >= deck.length - 1 ? 0 : i + 1)
+      if (e.key === 'ArrowLeft') jump(i <= 0 ? deck.length - 1 : i - 1)
       if (e.key === '1') rate('miss')
       if (e.key === '2') rate('partial')
       if (e.key === '3') rate('knew')
@@ -53,17 +63,17 @@ export function Cards() {
     return () => window.removeEventListener('keydown', onKey)
   })
 
-  function go(n: number) {
+  function jump(n: number) {
     setFlipped(false)
     setI(n)
   }
 
   function prev() {
-    go(i <= 0 ? deck.length - 1 : i - 1)
+    jump(i <= 0 ? deck.length - 1 : i - 1)
   }
 
   function next() {
-    go(i >= deck.length - 1 ? 0 : i + 1)
+    jump(i >= deck.length - 1 ? 0 : i + 1)
   }
 
   function rate(r: CardRating) {
@@ -74,7 +84,7 @@ export function Cards() {
     }))
     setTick((t) => t + 1)
     setFlipped(false)
-    go(i >= deck.length - 1 ? 0 : i + 1)
+    jump(i >= deck.length - 1 ? 0 : i + 1)
   }
 
   const pct = deck.length ? ((Math.min(i, deck.length - 1) + 1) / deck.length) * 100 : 0
@@ -88,7 +98,7 @@ export function Cards() {
         actually need on a written exam.
       </p>
       <div className="row" style={{ margin: '12px 0 18px' }}>
-        <button className={`chip ${session === 0 ? 'active' : ''}`} type="button" onClick={() => { setSession(0); go(0) }}>
+        <button className={`chip ${session === 0 ? 'active' : ''}`} type="button" onClick={() => onFilter(0)}>
           All sessions
         </button>
         {SESSIONS.map((s) => (
@@ -96,12 +106,12 @@ export function Cards() {
             key={s.id}
             className={`chip ${session === s.id ? 'active' : ''}`}
             type="button"
-            onClick={() => { setSession(s.id); go(0) }}
+            onClick={() => onFilter(s.id)}
           >
             S{s.id}
           </button>
         ))}
-        <button className={`chip ${weakOnly ? 'active' : ''}`} type="button" onClick={() => { setWeakOnly((w) => !w); go(0) }}>
+        <button className={`chip ${weakOnly ? 'active' : ''}`} type="button" onClick={() => { setWeakOnly((w) => !w) }}>
           Weak / unrated only
         </button>
         <button
@@ -109,7 +119,6 @@ export function Cards() {
           type="button"
           onClick={() => {
             setOrder(shuffle(FLASHCARDS.map((c) => c.id)))
-            go(0)
           }}
         >
           Shuffle

@@ -6,11 +6,15 @@ Live: **https://mjpalm13.github.io/hrm540-midterm/**
 
 ## How to study
 
-1. **Cards** — flip, then rate missed / partial / knew. Keyboard: space, arrows, 1 / 2 / 3.
-2. **Type** — write a case answer, then **Check what I should have put**. A popup shows your text next to a model and flags course ideas it did not find.
-3. **Quiz** — 20 multiple-choice traps.
-4. **Essays** — three full prompts with an optional timer and the same comparison popup.
-5. **Sessions / Case** — infographics and cite-able facts.
+Use the sections in order:
+
+1. **Learn** — one page per class: infographic, memorize tips, vocab, how it connects, a worked GSU example.
+2. **Connect** — how Sessions 1–8 stack into one essay.
+3. **Cards** — flip for definition + memory hook + GSU hook.
+4. **Case Qs** — type how a concept maps onto Barbara Norris, then open the popup for a strong model answer.
+5. **Quiz / Essays / Facts** — traps, timed writing, cite-able case details.
+
+Progress is stored in your browser (`localStorage`).
 
 Progress is stored in your browser (`localStorage`).
 
