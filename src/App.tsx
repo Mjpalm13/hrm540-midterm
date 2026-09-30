@@ -3,6 +3,7 @@ import { Apply } from './pages/Apply'
 import { Cards } from './pages/Cards'
 import { Case } from './pages/Case'
 import { Connect } from './pages/Connect'
+import { Exam } from './pages/Exam'
 import { Home } from './pages/Home'
 import { Learn } from './pages/Learn'
 import { Quiz } from './pages/Quiz'
@@ -66,13 +67,13 @@ export default function App() {
       {route === 'apply' && (
         <Apply key={session} session={session} go={go} />
       )}
+      {route === 'exam' && <Exam />}
       {route === 'quiz' && <Quiz />}
       {route === 'write' && <Write />}
       {route === 'case' && <Case />}
       <p className="footer-note">
-        Sections: Learn (by session) · Connect (how they stack) · Cards · Case questions
-        (type, then a strong-answer popup) · Quiz · Essays · Facts. Progress saves in this
-        browser.
+        Sections: Learn · Connect · Cards · Case Qs · 12-question exam (some combo
+        frameworks) · Quiz · Facts. Progress saves in this browser.
       </p>
     </div>
   )

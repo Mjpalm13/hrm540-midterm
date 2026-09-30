@@ -6,8 +6,17 @@ export function Connect({ go }: { go: (r: Route, session?: number) => void }) {
     <div>
       <div className="kicker">How the frameworks build</div>
       <h1>Each session adds a question about the same unit.</h1>
-      <p className="lede">{STACK_LINE}</p>
+      <p className="lede">
+        {STACK_LINE} The real midterm is 12 written questions; some combine two or more
+        of these hops. Click a step to study that session, or sit the 12-Q exam when you
+        can connect them without listing.
+      </p>
 
+      <div className="row" style={{ marginBottom: 18 }}>
+        <button className="btn brick" type="button" onClick={() => go('exam')}>
+          Sit the 12-question exam
+        </button>
+      </div>
       <div className="pipeline">
         {CONNECT_STEPS.map((step, i) => (
           <button

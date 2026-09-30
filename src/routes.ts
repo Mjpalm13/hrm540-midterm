@@ -4,6 +4,7 @@ export type Route =
   | 'connect'
   | 'cards'
   | 'apply'
+  | 'exam'
   | 'quiz'
   | 'write'
   | 'case'
@@ -14,8 +15,8 @@ export const NAV: { id: Route; label: string; path: string }[] = [
   { id: 'connect', label: 'Connect', path: '#/connect' },
   { id: 'cards', label: 'Cards', path: '#/cards' },
   { id: 'apply', label: 'Case Qs', path: '#/apply' },
+  { id: 'exam', label: '12-Q exam', path: '#/exam' },
   { id: 'quiz', label: 'Quiz', path: '#/quiz' },
-  { id: 'write', label: 'Essays', path: '#/write' },
   { id: 'case', label: 'Facts', path: '#/case' },
 ]
 
@@ -32,6 +33,7 @@ export function parseHash(hash: string): { route: Route; session: number } {
   if (path === 'connect') return { route: 'connect', session }
   if (path === 'cards') return { route: 'cards', session }
   if (path === 'apply') return { route: 'apply', session }
+  if (path === 'exam') return { route: 'exam', session }
   if (path === 'quiz') return { route: 'quiz', session }
   if (path === 'write') return { route: 'write', session }
   if (path === 'case') return { route: 'case', session }

@@ -6,6 +6,7 @@ export type Progress = {
   cards: Record<string, { rating: CardRating; at: number }>
   apply: Record<string, { draft: string; lastHits: number; lastTotal: number }>
   essays: Record<string, { draft: string; lastHits: number; lastTotal: number }>
+  exam: Record<string, { draft: string; lastHits: number; lastTotal: number }>
   quizBest: number
   quizLast: number
 }
@@ -14,6 +15,7 @@ const empty = (): Progress => ({
   cards: {},
   apply: {},
   essays: {},
+  exam: {},
   quizBest: 0,
   quizLast: 0,
 })

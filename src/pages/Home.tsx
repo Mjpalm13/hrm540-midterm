@@ -9,12 +9,12 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
 
   return (
     <div>
-      <div className="kicker">HRM 540 · four study sections</div>
+      <div className="kicker">HRM 540 · 12 written questions</div>
       <h1>Learn it, connect it, drill it, then write it onto GSU.</h1>
       <p className="lede">
-        The midterm is a written case. Use the sections in order: study each session
-        (infographics, vocab, memory tricks), see how frameworks stack, flip cards, then
-        type Barbara Norris answers and compare to a strong model.
+        The midterm is fully written: 12 questions on the Barbara Norris case. Some items
+        use one framework; some combine two or more. Learn each session, see how they
+        stack, then sit a 12-question practice exam and compare to a strong model.
       </p>
       <p className="kb">
         Progress on this browser: {knew}/{FLASHCARDS.length} cards marked knew · {applied}/{APPLY.length} case
@@ -63,20 +63,19 @@ export function Home({ go }: { go: (r: Route, session?: number) => void }) {
 
       <h2 className="section-title">3. Apply to Barbara Norris</h2>
       <div className="grid two">
-        <a className="door" href="#/apply" onClick={(e) => { e.preventDefault(); go('apply') }}>
-          <div className="num">{APPLY.length} prompts</div>
-          <h2>Type, then see a strong answer</h2>
+        <a className="door" href="#/exam" onClick={(e) => { e.preventDefault(); go('exam') }}>
+          <div className="num">12 questions</div>
+          <h2>Practice exam</h2>
           <p>
-            Write how a concept maps onto GSU. A popup shows what you wrote next to what
-            would most likely be a strong exam answer, plus missing course ideas.
+            Matches the real test length. Several items combine frameworks. Type, then see
+            what a strong answer would most likely include.
           </p>
         </a>
-        <a className="door" href="#/write" onClick={(e) => { e.preventDefault(); go('write') }}>
-          <div className="num">Full essays</div>
-          <h2>Exam-length practice</h2>
+        <a className="door" href="#/apply" onClick={(e) => { e.preventDefault(); go('apply') }}>
+          <div className="num">{APPLY.length} extra drills</div>
+          <h2>More case questions</h2>
           <p>
-            Optional timer. Same popup with a rubric scan. Stack frameworks instead of
-            listing them.
+            Extra typed prompts by session if you want more reps after the 12-question set.
           </p>
         </a>
       </div>
